@@ -157,13 +157,40 @@ ul { list-style: none; }
 .bar-chart-wrapper { display: flex; flex-direction: column; gap: 2rem; }
 .bar-group { display: flex; flex-direction: column; gap: 0.6rem; }
 .bar-label { font-family: var(--font-mono); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--grey-mid); margin-bottom: 0.2rem; }
-.bar-track { display: flex; align-items: center; gap: 1rem; }
-.bar { height: 40px; border-radius: 6px; width: 0; max-width: calc(var(--pct) * 1%); display: flex; align-items: center; justify-content: flex-end; padding-right: 0.8rem; transition: width 1.5s cubic-bezier(0.4,0,0.2,1); min-width: 60px; }
+.bar-track {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.bar {
+  height: 40px;
+  border-radius: 6px;
+  width: 0;
+  max-width: calc(var(--pct) * 1%);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 0.8rem;
+  transition: width 1.5s cubic-bezier(0.4,0,0.2,1);
+  min-width: 80px;
+}
 .bar.animated { width: calc(var(--pct) * 1%); }
 .bar--sg { background: linear-gradient(90deg, #c0392b, #e63946); }
 .bar--my { background: linear-gradient(90deg, #1b4332, #2d6a4f); }
 .bar-val { font-family: var(--font-mono); font-size: 0.75rem; color: rgba(255,255,255,0.9); font-weight: 700; white-space: nowrap; }
-.bar-country { font-size: 0.85rem; color: var(--grey-dark); white-space: nowrap; min-width: 120px; }
+.bar-country {
+  font-size: 0.82rem;
+  color: var(--grey-dark);
+  line-height: 1.5;
+  padding-left: 0.2rem;
+}
+.bar-country-note {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--grey-mid);
+  font-style: italic;
+  margin-top: 1px;
+}
 
 /* PRICE CARDS */
 .pricing-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 1rem; }
@@ -362,7 +389,7 @@ ul { list-style: none; }
 .fp-panel {
   position: fixed;
   top: 0;
-  right: -520px; /* hidden off-screen */
+  right: -520px;
   width: 500px;
   height: 100vh;
   background: var(--white);
@@ -565,23 +592,10 @@ ul { list-style: none; }
   border-bottom-color: transparent;
 }
 
-
 /* Force sources text to be visible */
-#sources .section-title {
-  color: var(--black) !important;
-}
-#sources .section-label {
-  color: var(--yellow) !important;
-}
-#sources .source-author {
-  color: var(--grey-mid) !important;
-}
-#sources .source-title {
-  color: var(--black) !important;
-}
-#sources .source-meta {
-  color: var(--grey-dark) !important;
-}
-#sources .source-num {
-  color: #ddd !important;
-}
+#sources .section-title { color: var(--black) !important; }
+#sources .section-label { color: var(--yellow) !important; }
+#sources .source-author { color: var(--grey-mid) !important; }
+#sources .source-title { color: var(--black) !important; }
+#sources .source-meta { color: var(--grey-dark) !important; }
+#sources .source-num { color: #ddd !important; }
