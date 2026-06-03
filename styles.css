@@ -151,34 +151,24 @@ ul { list-style: none; }
 .concept-intro p { font-size: 1rem; color: #333; margin-bottom: 1.2rem; line-height: 1.8; }
 
 /* BAR CHART */
-<div class="bar-chart-wrapper">
-  <div class="bar-group">
-    <div class="bar-label">GDP per Capita (USD, 2025)</div>
-    <div class="bar-track">
-      <div class="bar-row">
-        <span class="bar-flag">🇸🇬</span>
-        <div class="bar bar--sg animated" style="--pct: 88%"><span class="bar-val">~$96,760</span></div>
-      </div>
-      <div class="bar-row">
-        <span class="bar-flag">🇲🇾</span>
-        <div class="bar bar--my animated" style="--pct: 28%"><span class="bar-val">~$26,880</span></div>
-      </div>
-    </div>
-  </div>
-  <div class="bar-group">
-    <div class="bar-label">Monthly Median Wage (USD, 2025)</div>
-    <div class="bar-track">
-      <div class="bar-row">
-        <span class="bar-flag">🇸🇬</span>
-        <div class="bar bar--sg animated" style="--pct: 88%"><span class="bar-val">~$5,787</span></div>
-      </div>
-      <div class="bar-row">
-        <span class="bar-flag">🇲🇾</span>
-        <div class="bar bar--my animated" style="--pct: 20%"><span class="bar-val">~$1,106</span></div>
-      </div>
-    </div>
-  </div>
-</div>
+.bar-track { display: flex; flex-direction: column; gap: 0.6rem; }
+.bar-row { display: flex; align-items: center; gap: 0.8rem; }
+.bar-flag { font-size: 1.1rem; flex-shrink: 0; width: 1.5rem; }
+.bar {
+  height: 40px;
+  border-radius: 6px;
+  width: var(--pct);
+  max-width: var(--pct);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 0.8rem;
+  min-width: 80px;
+}
+.bar--sg { background: linear-gradient(90deg, #c0392b, #e63946); }
+.bar--my { background: linear-gradient(90deg, #1b4332, #2d6a4f); }
+.bar-val { font-family: var(--font-mono); font-size: 0.75rem; color: rgba(255,255,255,0.9); font-weight: 700; white-space: nowrap; }
+.bar-country { display: none; } /* no longer needed */
 
 /* PRICE CARDS */
 .pricing-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 1rem; }
