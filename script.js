@@ -1,269 +1,428 @@
-console.log("DON DON DONKI RESEARCH — JS running");
+/* =========================================================
+   DON DON DONKI RESEARCH
+   Main JavaScript
+========================================================= */
 
-/* Scroll reveal */
 
-const fadeObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add("visible");
-      fadeObserver.unobserve(entry.target);
-    }
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+const fadeElements = document.querySelectorAll(".fade-up");
+
+const fadeObserver = new IntersectionObserver(
+  (entries) => {
+
+    entries.forEach((entry) => {
+
+      if (entry.isIntersecting) {
+
+        entry.target.classList.add("visible");
+
+        fadeObserver.unobserve(entry.target);
+
+      }
+
+    });
+
+  },
+  {
+    threshold: 0.1,
+    rootMargin: "0px 0px -40px 0px"
+  }
+);
+
+fadeElements.forEach((element) => {
+  fadeObserver.observe(element);
+});
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+const navToggle = document.getElementById("navToggle");
+const navLinks = document.querySelector(".nav-links");
+
+if (navToggle) {
+
+  navToggle.addEventListener("click", () => {
+
+    navLinks.classList.toggle("open");
+
   });
-},{
-  threshold:.1,
-  rootMargin:"0px 0px -30px 0px"
+
+}
+
+
+document.querySelectorAll(".nav-links a").forEach((link) => {
+
+  link.addEventListener("click", () => {
+
+    navLinks.classList.remove("open");
+
+  });
+
 });
 
-document.querySelectorAll(".fade-up").forEach(el => {
-  fadeObserver.observe(el);
-});
 
-
-/* Progress bar */
+/* =========================================================
+   READING PROGRESS BAR
+========================================================= */
 
 const progressBar = document.createElement("div");
 
-progressBar.style.cssText =
-  "position:fixed;top:60px;left:0;height:3px;background:var(--yellow);z-index:1100;width:0;transition:width .1s linear;pointer-events:none";
+progressBar.style.cssText = `
+  position: fixed;
+  top: 62px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: var(--yellow);
+  z-index: 2000;
+  pointer-events: none;
+`;
 
 document.body.appendChild(progressBar);
 
 
-/* Navigation */
-
-const navLinks = document.querySelector(".nav-links");
-const navToggle = document.getElementById("navToggle");
-const navAnchors = document.querySelectorAll(".nav-links a");
-const sections = document.querySelectorAll("section[id]");
-
 window.addEventListener("scroll", () => {
 
-  const max =
-    document.documentElement.scrollHeight - window.innerHeight;
+  const scrollTop = window.scrollY;
 
-  progressBar.style.width =
-    (max > 0 ? (window.scrollY / max) * 100 : 0) + "%";
+  const documentHeight =
+    document.documentElement.scrollHeight -
+    window.innerHeight;
 
-  let current = "";
+  const percentage =
+    documentHeight > 0
+      ? (scrollTop / documentHeight) * 100
+      : 0;
 
-  sections.forEach(section => {
-    if(window.scrollY >= section.offsetTop - 100){
-      current = section.id;
+  progressBar.style.width = `${percentage}%`;
+
+});
+
+
+/* =========================================================
+   STORE FLOORPLAN
+========================================================= */
+
+const fpZoneData = {
+
+  entrance: {
+
+    badge: "Zone 01 — Entrance",
+
+    title: "First Impressions Are Part of the Product",
+
+    body: `
+      <p>
+        Donki's entrance is designed to communicate energy,
+        value and difference immediately. Bright signage, large
+        product displays and bold promotional language make the
+        store visually different from a conventional supermarket.
+      </p>
+
+      <p>
+        This creates attention before the customer has even entered.
+        However, attention is only the first stage of the business
+        model. The important question is whether attention becomes
+        purchase and eventually repeat purchasing.
+      </p>
+    `,
+
+    compare: {
+      sg: `
+        Singapore's dense urban retail environment can make a
+        visually distinctive store a useful destination in itself.
+      `,
+
+      my: `
+        In Malaysia, attention still matters, but the store must
+        compete with many established malls and supermarket formats.
+      `
     }
-  });
 
-  navAnchors.forEach(a => {
-    a.style.color =
-      a.getAttribute("href") === "#" + current
-        ? "var(--yellow)"
-        : "";
-  });
-
-},{
-  passive:true
-});
-
-
-/* Mobile navigation */
-
-navToggle?.addEventListener("click", () => {
-
-  navLinks.classList.toggle("open");
-
-  const spans = navToggle.querySelectorAll("span");
-  const open = navLinks.classList.contains("open");
-
-  spans[0].style.transform =
-    open ? "rotate(45deg) translate(5px,5px)" : "";
-
-  spans[1].style.opacity =
-    open ? "0" : "1";
-
-  spans[2].style.transform =
-    open ? "rotate(-45deg) translate(5px,-5px)" : "";
-
-});
-
-navAnchors.forEach(a => {
-
-  a.addEventListener("click", () => {
-    navLinks.classList.remove("open");
-  });
-
-});
-
-
-/* Hero tape animation */
-
-document.querySelectorAll(".hero-tape").forEach(t => {
-  t.innerHTML += t.innerHTML;
-});
-
-
-/* Interactive floorplan */
-
-const zoneData = {
-
-  entrance:{
-    badge:"ZONE 1 — ENTRANCE",
-    img:"images/entrance.jpg",
-    caption:"Store entrance",
-    title:"First Impressions & Market Entry",
-
-    body:
-      "The entrance communicates Donki's identity immediately through bright signs, dense displays and deal-oriented language. This creates attention, but the same first impression needs to communicate value and relevance in each market.",
-
-    sg:
-      "Strong brand recognition can make the unusual entrance feel exciting and familiar.",
-
-    my:
-      "The opportunity is to keep the distinctive Japanese identity while making local value and relevance clearer."
   },
 
-  food:{
-    badge:"ZONE 2 — FOOD HALL",
-    img:"images/food-hall.jpg",
-    caption:"Food hall and dining area",
-    title:"Food: From Japan to Everyday Consumption",
 
-    body:
-      "Food can combine Donki's Japanese differentiation with repeat purchasing. It is therefore strategically different from novelty snacks: the goal is not only to make customers curious, but to make the store useful for regular consumption.",
+  food: {
 
-    sg:
-      "Japanese ready-to-eat food and imported groceries can support both experience and repeat visits.",
+    badge: "Zone 02 — Food Hall",
 
-    my:
-      "Halal accessibility and local food preferences become important conditions for broad market reach."
+    title: "Food Creates Frequency",
+
+    body: `
+      <p>
+        Imported snacks are useful for discovery, but fresh food
+        and ready-to-eat products can create a much stronger reason
+        to return regularly.
+      </p>
+
+      <p>
+        This creates an important distinction between a tourist
+        customer and a routine customer. The first may visit once;
+        the second can generate substantially more lifetime value.
+      </p>
+
+      <p>
+        In markets where halal requirements are commercially
+        important, the size and accessibility of the halal assortment
+        also becomes part of product-market fit.
+      </p>
+    `,
+
+    compare: {
+      sg: `
+        A broad Japanese food proposition can appeal to consumers
+        already familiar with Japanese cuisine.
+      `,
+
+      my: `
+        The key question is whether halal and local food adaptation
+        is sufficient to make the food proposition relevant to the
+        wider Malaysian market.
+      `
+    }
+
   },
 
-  snacks:{
-    badge:"ZONE 3 — SNACKS & IMPORTS",
-    img:"images/snacks.jpg",
-    caption:"Japanese snack aisle",
-    title:"Japanese Snacks: The Impulse Engine",
 
-    body:
-      "Unusual snacks are powerful discovery products. They create a reason to browse, buy something unplanned and potentially share the experience. However, novelty alone does not guarantee long-term customer value.",
+  snacks: {
 
-    sg:
-      "The discovery proposition can support impulse purchasing and repeat exploration.",
+    badge: "Zone 03 — Japanese Imports",
 
-    my:
-      "Imported price premiums can reduce the chance that novelty turns into a regular purchasing habit."
+    title: "Japanese Imports Drive Differentiation",
+
+    body: `
+      <p>
+        Japanese snacks, drinks and lifestyle products are difficult
+        for conventional supermarkets to replicate at the same depth.
+        This gives Donki a genuine differentiation advantage.
+      </p>
+
+      <p>
+        However, differentiation does not automatically equal
+        repeat purchasing. A customer may be excited by a product
+        once but decide that the price is too high for regular
+        consumption.
+      </p>
+
+      <p>
+        The strongest strategy is therefore to combine exclusive
+        discovery products with affordable, frequently purchased
+        products.
+      </p>
+    `,
+
+    compare: {
+      sg: `
+        Strong Japanese-product familiarity can increase the
+        likelihood that customers recognise brands and products.
+      `,
+
+      my: `
+        Imported-product pricing needs to be compared against
+        local alternatives rather than judged purely by Japanese
+        retail prices.
+      `
+    }
+
   },
 
-  signage:{
-    badge:"ZONE 4 — LAYOUT & SIGNAGE",
-    img:"images/signage.jpg",
-    caption:"Store layout and signage",
-    title:"Controlled Chaos",
 
-    body:
-      "Dense displays, handwritten-style signs and unexpected product adjacencies make the shopping journey distinctive. The strategic question is whether customers interpret this complexity as entertainment or as friction.",
+  signage: {
 
-    sg:
-      "The format can function as a recognisable part of the Donki brand.",
+    badge: "Zone 04 — Layout & Signage",
 
-    my:
-      "Clearer navigation may be needed in parts of the store where customers are shopping for practical everyday products."
+    title: "Controlled Chaos Has a Cost",
+
+    body: `
+      <p>
+        Donki's compressed display strategy creates a treasure-hunt
+        experience. Customers are encouraged to browse rather than
+        simply find one item and leave.
+      </p>
+
+      <p>
+        But the same design can reduce shopping efficiency.
+        Traditional supermarkets optimise for navigation and speed;
+        Donki often optimises for discovery.
+      </p>
+
+      <p>
+        The optimal balance may therefore depend on the customer
+        segment. A store targeting tourists and discovery shoppers
+        can tolerate more complexity than a store trying to become
+        an everyday neighbourhood grocery destination.
+      </p>
+    `,
+
+    compare: {
+      sg: `
+        The distinctive layout can function as entertainment and
+        contribute to the store's brand identity.
+      `,
+
+      my: `
+        A more locally adapted balance between discovery and
+        navigation may be required in some Malaysian catchments.
+      `
+    }
+
   },
 
-  cosmetics:{
-    badge:"ZONE 5 — COSMETICS",
-    img:"images/cosmetics.jpg",
-    caption:"Cosmetics and lifestyle section",
-    title:"Japanese Beauty: A Portable Advantage",
 
-    body:
-      "Japanese beauty products provide differentiation that can travel across borders. Localisation still matters through product range, shades, formulas and price positioning.",
+  cosmetics: {
 
-    sg:
-      "J-beauty can benefit from existing familiarity and strong demand for Japanese brands.",
+    badge: "Zone 05 — Beauty & Lifestyle",
 
-    my:
-      "A broader locally relevant assortment can help Japanese beauty appeal to more customers."
+    title: "Beauty Can Travel Better Than Food",
+
+    body: `
+      <p>
+        Japanese beauty products have strong international
+        differentiation because consumers often seek specific
+        Japanese brands, formulas and product reputations.
+      </p>
+
+      <p>
+        Cosmetics can therefore be less dependent on local food
+        preferences than groceries. However, product range,
+        shades, formulations and price points still need to reflect
+        the local customer.
+      </p>
+
+      <p>
+        This makes beauty an example of a category where Donki's
+        Japanese identity can remain highly visible while the
+        assortment is still localised.
+      </p>
+    `,
+
+    compare: {
+      sg: `
+        High-density urban consumers and strong beauty retail demand
+        create a potentially attractive environment.
+      `,
+
+      my: `
+        Product selection should account for local beauty preferences
+        rather than assuming Japanese assortment automatically fits.
+      `
+    }
+
   },
 
-  checkout:{
-    badge:"ZONE 6 — CHECKOUT",
-    img:"images/checkout.jpg",
-    caption:"Checkout and price tags",
-    title:"The Moment of Truth: Price Perception",
 
-    body:
-      "At checkout, the customer's entire shopping journey becomes a bill. Promotional signs can create value perception, but the final price still has to make sense relative to local incomes and alternatives.",
+  checkout: {
 
-    sg:
-      "Higher purchasing power can make imported products easier to perceive as acceptable value.",
+    badge: "Zone 06 — Checkout",
 
-    my:
-      "A larger relative price burden can make local competitors more difficult to beat on everyday products."
+    title: "The Checkout Tests the Value Proposition",
+
+    body: `
+      <p>
+        Promotional price tags can make products appear inexpensive,
+        but consumers ultimately compare the total basket against
+        their alternatives.
+      </p>
+
+      <p>
+        This is why Donki's pricing strategy should focus on
+        high-frequency key-value items. Customers need to encounter
+        enough visibly competitive prices to believe the overall
+        store represents good value.
+      </p>
+
+      <p>
+        Premium or exclusive products can then support margin where
+        differentiation is strong.
+      </p>
+    `,
+
+    compare: {
+      sg: `
+        Higher purchasing power can make imported Japanese products
+        more accessible to a larger share of consumers.
+      `,
+
+      my: `
+        The same imported price can represent a greater share of
+        household spending, increasing the importance of local
+        price benchmarking.
+      `
+    }
+
   }
 
 };
 
 
-/* Open floorplan panel */
+function openFpPanel(zoneKey) {
 
-function openFpPanel(key){
+  const data = fpZoneData[zoneKey];
 
-  const d = zoneData[key];
+  if (!data) return;
 
-  if(!d) return;
 
-  document.getElementById("fpPanelBadge").textContent =
-    d.badge;
+  const panel = document.getElementById("fpPanel");
+  const dim = document.getElementById("fpDim");
 
-  document.getElementById("fpPanelTitle").textContent =
-    d.title;
+  const badge = document.getElementById("fpPanelBadge");
+  const title = document.getElementById("fpPanelTitle");
+  const body = document.getElementById("fpPanelBody");
+  const compare = document.getElementById("fpPanelCompare");
 
-  document.getElementById("fpPanelBody").innerHTML =
-    `<p>${d.body}</p>`;
 
-  document.getElementById("fpPanelCaption").textContent =
-    d.caption;
+  badge.textContent = data.badge;
 
-  const img =
-    document.getElementById("fpPanelImg");
+  title.textContent = data.title;
 
-  img.src = d.img;
-  img.alt = d.caption;
+  body.innerHTML = data.body;
 
-  document.getElementById("fpPanelCompare").innerHTML = `
 
-    <div>
-      <b>🇸🇬 SINGAPORE</b>
-      <p>${d.sg}</p>
-    </div>
+  compare.innerHTML = `
 
-    <div>
-      <b>🇲🇾 MALAYSIA</b>
-      <p>${d.my}</p>
+    <div class="fp-compare-row">
+
+      <div class="fp-compare-sg">
+
+        <span class="fp-compare-verdict success">
+          🇸🇬 Singapore
+        </span>
+
+        <p>${data.compare.sg}</p>
+
+      </div>
+
+
+      <div class="fp-compare-my">
+
+        <span class="fp-compare-verdict fail">
+          🇲🇾 Malaysia
+        </span>
+
+        <p>${data.compare.my}</p>
+
+      </div>
+
     </div>
 
   `;
 
-  document.getElementById("fpPanel")
-    .classList.add("open");
 
-  document.getElementById("fpDim")
-    .classList.add("visible");
+  panel.classList.add("open");
+
+  dim.classList.add("visible");
 
   document.body.style.overflow = "hidden";
-
-  document.querySelectorAll(".fp-zone")
-    .forEach(z => z.classList.remove("active"));
-
-  document
-    .querySelector(`[data-zone="${key}"]`)
-    ?.classList.add("active");
 
 }
 
 
-/* Close floorplan panel */
-
-function closeFpPanel(){
+function closeFpPanel() {
 
   document.getElementById("fpPanel")
     .classList.remove("open");
@@ -273,142 +432,323 @@ function closeFpPanel(){
 
   document.body.style.overflow = "";
 
-  document.querySelectorAll(".fp-zone")
-    .forEach(z => z.classList.remove("active"));
-
 }
 
 
-/* Floorplan listeners */
-
-document.querySelectorAll(".fp-zone").forEach(zone => {
-
-  zone.tabIndex = 0;
-  zone.setAttribute("role","button");
+document.querySelectorAll(".fp-zone").forEach((zone) => {
 
   zone.addEventListener("click", () => {
+
     openFpPanel(zone.dataset.zone);
-  });
-
-  zone.addEventListener("keydown", e => {
-
-    if(e.key === "Enter" || e.key === " "){
-      e.preventDefault();
-      openFpPanel(zone.dataset.zone);
-    }
 
   });
 
 });
 
-document
-  .getElementById("fpPanelClose")
-  ?.addEventListener("click", closeFpPanel);
 
-document
-  .getElementById("fpDim")
-  ?.addEventListener("click", closeFpPanel);
+document.getElementById("fpPanelClose")
+  .addEventListener("click", closeFpPanel);
 
-document.addEventListener("keydown", e => {
+document.getElementById("fpDim")
+  .addEventListener("click", closeFpPanel);
 
-  if(e.key === "Escape"){
+
+document.addEventListener("keydown", (event) => {
+
+  if (event.key === "Escape") {
+
     closeFpPanel();
+
   }
 
 });
 
 
-/* Singapore / Malaysia experience toggle */
+/* =========================================================
+   BREAK-EVEN CALCULATOR
+========================================================= */
 
-document.querySelectorAll(".toggle-btn").forEach(btn => {
+const rentInput =
+  document.getElementById("rentInput");
 
-  btn.addEventListener("click", () => {
+const labourInput =
+  document.getElementById("labourInput");
 
-    const country = btn.dataset.country;
+const otherInput =
+  document.getElementById("otherInput");
 
-    document
-      .querySelectorAll(".toggle-btn")
-      .forEach(b => {
-        b.classList.toggle("active", b === btn);
-      });
+const marginInput =
+  document.getElementById("marginInput");
 
-    document
-      .getElementById("experience-sg")
-      .classList.toggle("hidden", country !== "sg");
+const visitorInput =
+  document.getElementById("visitorInput");
 
-    document
-      .getElementById("experience-my")
-      .classList.toggle("hidden", country !== "my");
-
-  });
-
-});
+const basketInput =
+  document.getElementById("basketInput");
 
 
-/* Hypothetical break-even calculator */
+const fixedCostOutput =
+  document.getElementById("fixedCostOutput");
 
-const fixedCost =
-  document.getElementById("fixedCost");
+const revenueOutput =
+  document.getElementById("revenueOutput");
 
-const margin =
-  document.getElementById("margin");
+const grossProfitOutput =
+  document.getElementById("grossProfitOutput");
 
-const basket =
-  document.getElementById("basket");
+const breakEvenOutput =
+  document.getElementById("breakEvenOutput");
 
-const beSales =
-  document.getElementById("beSales");
+const breakEvenVisitorsOutput =
+  document.getElementById("breakEvenVisitorsOutput");
 
-const beTransactions =
-  document.getElementById("beTransactions");
+const calcStatus =
+  document.getElementById("calcStatus");
 
 
-function updateBreakEven(){
+function formatMoney(value) {
 
-  if(!fixedCost || !margin || !basket) return;
+  if (!Number.isFinite(value)) {
+    return "$0";
+  }
 
-  const fixed =
-    Number(fixedCost.value) || 0;
+  if (value >= 1000000) {
 
-  const m =
-    (Number(margin.value) || 1) / 100;
+    return "$" +
+      (value / 1000000)
+        .toFixed(1) +
+      "m";
 
-  const avg =
-    Number(basket.value) || 1;
+  }
 
-  const sales =
-    fixed / m;
+  if (value >= 1000) {
 
-  const transactions =
-    Math.ceil(sales / avg);
+    return "$" +
+      (value / 1000)
+        .toFixed(0) +
+      "k";
 
-  beSales.textContent =
-    "S$" + Math.round(sales).toLocaleString();
+  }
 
-  beTransactions.textContent =
-    "≈ " + transactions.toLocaleString() +
-    " transactions/month";
+  return "$" +
+    Math.round(value)
+      .toLocaleString();
 
 }
 
 
-[fixedCost, margin, basket].forEach(el => {
+function updateCalculator() {
 
-  el?.addEventListener("input", updateBreakEven);
+  const rent =
+    Number(rentInput.value) || 0;
+
+  const labour =
+    Number(labourInput.value) || 0;
+
+  const other =
+    Number(otherInput.value) || 0;
+
+  const margin =
+    (Number(marginInput.value) || 0) / 100;
+
+  const visitors =
+    Number(visitorInput.value) || 0;
+
+  const basket =
+    Number(basketInput.value) || 0;
+
+
+  const fixedCosts =
+    rent +
+    labour +
+    other;
+
+
+  const revenue =
+    visitors *
+    basket;
+
+
+  const grossProfit =
+    revenue *
+    margin;
+
+
+  const breakEvenSales =
+    margin > 0
+      ? fixedCosts / margin
+      : 0;
+
+
+  const breakEvenVisitors =
+    basket > 0
+      ? breakEvenSales / basket
+      : 0;
+
+
+  fixedCostOutput.textContent =
+    formatMoney(fixedCosts);
+
+  revenueOutput.textContent =
+    formatMoney(revenue);
+
+  grossProfitOutput.textContent =
+    formatMoney(grossProfit);
+
+  breakEvenOutput.textContent =
+    formatMoney(breakEvenSales);
+
+  breakEvenVisitorsOutput.textContent =
+    Math.ceil(breakEvenVisitors)
+      .toLocaleString();
+
+
+  if (revenue >= breakEvenSales) {
+
+    calcStatus.textContent =
+      "Above hypothetical break-even";
+
+    calcStatus.classList.remove("warning");
+
+  } else {
+
+    calcStatus.textContent =
+      "Below hypothetical break-even";
+
+    calcStatus.classList.add("warning");
+
+  }
+
+}
+
+
+[
+  rentInput,
+  labourInput,
+  otherInput,
+  marginInput,
+  visitorInput,
+  basketInput
+].forEach((input) => {
+
+  input.addEventListener(
+    "input",
+    updateCalculator
+  );
 
 });
 
-updateBreakEven();
+
+updateCalculator();
 
 
-/* Make sources visible after loading */
+/* =========================================================
+   NAV ACTIVE SECTION
+========================================================= */
 
-window.addEventListener("load", () => {
+const sections =
+  document.querySelectorAll("section[id]");
 
-  document
-    .querySelectorAll("#sources .fade-up")
-    .forEach(el => {
-      el.classList.add("visible");
-    });
+const navAnchors =
+  document.querySelectorAll(".nav-links a");
 
-});
+
+function updateActiveNav() {
+
+  let current = "";
+
+  sections.forEach((section) => {
+
+    const sectionTop =
+      section.offsetTop;
+
+    if (
+      window.scrollY >=
+      sectionTop - 130
+    ) {
+
+      current =
+        section.getAttribute("id");
+
+    }
+
+  });
+
+
+  navAnchors.forEach((anchor) => {
+
+    anchor.style.color = "";
+
+    if (
+      anchor.getAttribute("href") ===
+      `#${current}`
+    ) {
+
+      anchor.style.color =
+        "var(--yellow)";
+
+    }
+
+  });
+
+}
+
+
+window.addEventListener(
+  "scroll",
+  updateActiveNav
+);
+
+updateActiveNav();
+
+
+/* =========================================================
+   CARD MICRO-INTERACTIONS
+========================================================= */
+
+document
+  .querySelectorAll(".stat-card, .product-card, .country-card")
+  .forEach((card) => {
+
+    card.addEventListener(
+      "mouseenter",
+      () => {
+
+        card.style.transition =
+          "transform .3s ease";
+
+      }
+    );
+
+  });
+
+
+/* =========================================================
+   HERO TAPE
+========================================================= */
+
+document
+  .querySelectorAll(".hero-tape")
+  .forEach((tape) => {
+
+    tape.innerHTML +=
+      tape.innerHTML;
+
+  });
+
+
+/* =========================================================
+   CONSOLE
+========================================================= */
+
+console.log(
+  "%c ◆ DON DON DONKI RESEARCH ",
+  `
+    background:#FFD200;
+    color:#0e0e0e;
+    font-family:monospace;
+    font-size:14px;
+    font-weight:bold;
+    padding:8px 16px;
+  `
+);
