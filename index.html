@@ -1,442 +1,839 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Don Don Donki — Localisation Research</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sora:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sora:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-<nav id="navbar">
-  <div class="nav-logo"><span class="logo-icon">◆</span><span>DON DON DONKI</span></div>
-  <ul class="nav-links">
-    <li><a href="#intro">Introduction</a></li>
-    <li><a href="#store-sim">Experience</a></li>
-    <li><a href="#product">Product</a></li>
-    <li><a href="#price">Price</a></li>
-    <li><a href="#placement">Place</a></li>
-    <li><a href="#promotion">Promotion</a></li>
-    <li><a href="#operations">Operations</a></li>
-    <li><a href="#economics">Economics</a></li>
-    <li><a href="#expansion">Expansion</a></li>
-    <li><a href="#recommendations">Recommendations</a></li>
-    <li><a href="#conclusion">Conclusion</a></li>
-  </ul>
-  <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
-</nav>
-
-<section id="hero">
-  <div class="hero-bg-grid"></div>
-  <div class="hero-tape hero-tape--top">DON DON DONKI &nbsp; ドン・キホーテ &nbsp; DON DON DONKI &nbsp; ドン・キホーテ &nbsp; DON DON DONKI &nbsp; ドン・キホーテ &nbsp;</div>
-  <div class="hero-content">
-    <p class="hero-eyebrow fade-up">Research Paper · International Business Strategy</p>
-    <h1 class="hero-title fade-up delay-1">
-      <span>Why Donki</span>
-      <span class="title-accent">works in Singapore</span>
-      <span>but faced challenges in Malaysia</span>
-    </h1>
-    <p class="hero-sub fade-up delay-2">Experiential retail creates attention. But international success depends on whether product, price, placement, promotion, operations and store economics fit the local market.</p>
-    <a href="#intro" class="hero-cta fade-up delay-3">Begin Research ↓</a>
-  </div>
-  <div class="hero-tape hero-tape--bottom">EXPERIENCE → PRODUCT → PRICE → PLACE → PROMOTION → REPEAT PURCHASE → STORE ECONOMICS &nbsp; </div>
-</section>
-
-<section id="intro" class="section">
-  <div class="container">
-    <div class="section-label fade-up">01 — Introduction</div>
-    <h2 class="section-title fade-up">What is Don Don Donki?</h2>
-    <div class="intro-grid fade-up">
-      <div class="intro-text">
-        <p><strong>Don Don Donki</strong> is a Japanese discount retailer selling groceries, snacks, cosmetics, household products and other imported goods. Its identity is built around Japanese products, dense displays, handwritten-style signs, novelty and a highly experiential shopping environment.</p>
-        <p>Don Don Donki originated from Japan's Don Quijote chain and expanded overseas under Pan Pacific International Holdings (PPIH). Singapore became its first Southeast Asian market in 2017, while Malaysia entered the network in 2021.</p>
-        <p>The central question is not simply whether Donki's Japanese concept is attractive. It is whether the entire business system can be adapted to different consumer, economic and competitive conditions.</p>
-      </div>
-      <div class="intro-stats">
-        <div class="stat-card"><div class="stat-num">1980</div><div class="stat-label">Don Quijote founded</div></div>
-        <div class="stat-card"><div class="stat-num">2017</div><div class="stat-label">Singapore entry</div></div>
-        <div class="stat-card"><div class="stat-num">2021</div><div class="stat-label">Malaysia entry</div></div>
-        <div class="stat-card"><div class="stat-num">799</div><div class="stat-label">PPIH stores, Jun 2026</div></div>
-      </div>
+  <!-- NAVIGATION -->
+  <nav id="navbar">
+    <div class="nav-logo">
+      <span class="logo-icon">◆</span>
+      <span>DON DON DONKI</span>
     </div>
+    <ul class="nav-links">
+      <li><a href="#intro">Intro</a></li>
+      <li><a href="#store-sim">Store</a></li>
+      <li><a href="#s1-experiential">Experience</a></li>
+      <li><a href="#s1b-product">Product</a></li>
+      <li><a href="#s2-pricing">Price</a></li>
+      <li><a href="#s2c-placement">Place</a></li>
+      <li><a href="#s2d-promotion">Promotion</a></li>
+      <li><a href="#s2b-supplychain">Supply Chain</a></li>
+      <li><a href="#s3b-storeeconomics">Economics</a></li>
+      <li><a href="#s3-expansion">Expansion</a></li>
+      <li><a href="#s3d-recommendations">Recommendations</a></li>
+      <li><a href="#conclusion">Conclusion</a></li>
+      <li><a href="#sources">Sources</a></li>
+    </ul>
+    <div class="nav-toggle" id="navToggle">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
 
-    <div class="research-box fade-up">
-      <div class="rq-label">Research Question</div>
-      <p class="rq-text">What localisation strategies does Donki use to expand into other markets? Why did they succeed in Singapore but underperform in Malaysia?</p>
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-tape hero-tape--top">DON DON DONKI &nbsp; ドン・キホーテ &nbsp; DON DON DONKI &nbsp; ドン・キホーテ &nbsp; DON DON DONKI &nbsp; ドン・キホーテ &nbsp; DON DON DONKI &nbsp;</div>
+    <div class="hero-content">
+      <p class="hero-eyebrow fade-up">Research Paper · International Business Strategy</p>
+      <h1 class="hero-title fade-up delay-1">
+        <span class="title-line">One store model,</span>
+        <span class="title-line title-accent">two very different markets</span>
+        <span class="title-line">Singapore and Malaysia</span>
+      </h1>
+      <p class="hero-sub fade-up delay-2">
+        Experiential retail alone is not enough. International success demands alignment between product, price, place, promotion, operations and store economics — localised to each market's economic and cultural reality.
+      </p>
+      <a href="#intro" class="hero-cta fade-up delay-3">Begin Research ↓</a>
     </div>
+    <div class="hero-tape hero-tape--bottom">SINGAPORE &nbsp; 16 STORES &nbsp; MALAYSIA &nbsp; 2 STORES &nbsp; SINGAPORE &nbsp; 16 STORES &nbsp; MALAYSIA &nbsp; 2 STORES &nbsp;</div>
+  </section>
 
-    <div class="framework-grid fade-up">
-      <div class="framework-card"><span>01</span><strong>PRODUCT</strong><p>Does Donki sell the right products for the local market?</p></div>
-      <div class="framework-card"><span>02</span><strong>PRICE</strong><p>Are those products affordable relative to purchasing power?</p></div>
-      <div class="framework-card"><span>03</span><strong>PLACEMENT</strong><p>Are stores located where enough target customers exist?</p></div>
-      <div class="framework-card"><span>04</span><strong>PROMOTION</strong><p>Is Donki communicating the right value proposition?</p></div>
-      <div class="framework-card"><span>05</span><strong>OPERATIONS</strong><p>Can the supply chain support competitive prices and margins?</p></div>
-      <div class="framework-card"><span>06</span><strong>ECONOMICS</strong><p>Can individual stores generate enough profit to justify expansion?</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="store-sim" class="section section--dark">
-  <div class="container">
-    <div class="section-label yellow">Interactive — Walk The Store</div>
-    <h2 class="section-title white">Step Inside Don Don Donki</h2>
-    <p class="section-intro dark-text">Click an area to see how the physical store connects to the wider business strategy.</p>
-    <div class="store-floorplan fade-up">
-      <div class="fp-zone" data-zone="entrance"><img src="images/entrance.jpg" alt="Donki entrance"><div class="fp-zone-overlay"><span>🚪</span><b>Entrance</b><small>ATTENTION</small></div></div>
-      <div class="fp-zone" data-zone="food"><img src="images/food-hall.jpg" alt="Food hall"><div class="fp-zone-overlay"><span>🍱</span><b>Food Hall</b><small>REPEAT PURCHASE</small></div></div>
-      <div class="fp-zone" data-zone="snacks"><img src="images/snacks.jpg" alt="Snack aisle"><div class="fp-zone-overlay"><span>🍫</span><b>Snacks & Imports</b><small>DIFFERENTIATION</small></div></div>
-      <div class="fp-zone" data-zone="signage"><img src="images/signage.jpg" alt="Store signage"><div class="fp-zone-overlay"><span>📢</span><b>Layout & Signage</b><small>EXPERIENCE</small></div></div>
-      <div class="fp-zone" data-zone="cosmetics"><img src="images/cosmetics.jpg" alt="Cosmetics"><div class="fp-zone-overlay"><span>💄</span><b>Cosmetics</b><small>J-BEAUTY</small></div></div>
-      <div class="fp-zone" data-zone="checkout"><img src="images/checkout.jpg" alt="Checkout"><div class="fp-zone-overlay"><span>🏷️</span><b>Checkout</b><small>VALUE PERCEPTION</small></div></div>
-    </div>
-    <div class="fp-dim" id="fpDim"></div>
-    <aside class="fp-panel" id="fpPanel">
-      <button class="fp-panel-close" id="fpPanelClose">✕ Close</button>
-      <div class="fp-panel-img-wrap"><img id="fpPanelImg" src="" alt=""><div id="fpPanelCaption"></div></div>
-      <div class="fp-panel-badge" id="fpPanelBadge"></div>
-      <h3 class="fp-panel-title" id="fpPanelTitle"></h3>
-      <div class="fp-panel-body" id="fpPanelBody"></div>
-      <div class="fp-panel-compare" id="fpPanelCompare"></div>
-    </aside>
-  </div>
-</section>
-
-<section id="experience" class="section">
-  <div class="container">
-    <div class="section-label fade-up">02 — The Donki Experience</div>
-    <h2 class="section-title fade-up">Experience creates attention.<br>It does not guarantee success.</h2>
-    <div class="concept-intro fade-up">
-      <p><strong>Experiential retail</strong> prioritises discovery, sensory stimulation and emotional engagement. Donki's compressed displays, unexpected product combinations, handwritten signs and dense shelves turn shopping into a form of exploration.</p>
-      <p>The important analytical shift is that experience should be treated as the <strong>first link in a chain</strong>, rather than the complete explanation for international performance.</p>
-    </div>
-    <div class="strategy-chain fade-up">
-      <div><span>01</span><b>EXPERIENCE</b><small>creates attention</small></div><i>→</i>
-      <div><span>02</span><b>PRODUCT</b><small>creates differentiation</small></div><i>→</i>
-      <div><span>03</span><b>PRICE</b><small>creates value</small></div><i>→</i>
-      <div><span>04</span><b>PLACE</b><small>creates access</small></div><i>→</i>
-      <div><span>05</span><b>PROMOTION</b><small>creates awareness</small></div><i>→</i>
-      <div><span>06</span><b>REPEAT</b><small>creates loyalty</small></div><i>→</i>
-      <div><span>07</span><b>ECONOMICS</b><small>determines viability</small></div>
-    </div>
-    <div class="compare-toggle-wrapper fade-up">
-      <div class="compare-toggle-btns"><button class="toggle-btn active" data-country="sg">🇸🇬 Singapore</button><button class="toggle-btn" data-country="my">🇲🇾 Malaysia</button></div>
-      <div class="compare-panel" id="experience-sg">
-        <div class="compare-header"><span class="verdict">CONTEXT FIT</span><h3>Singapore: Discovery can become entertainment</h3></div>
-        <div class="compare-body">
-          <div class="compare-point"><span>🏙️</span><div><strong>Urban environment</strong><p>A highly urbanised and internationally exposed market provides many consumers with experience of different retail formats.</p></div></div>
-          <div class="compare-point"><span>🎌</span><div><strong>Japan exposure — hypothesis</strong><p>Greater exposure to Japan may increase familiarity with Japanese products and retail culture. This is a hypothesis, not proof of causation.</p></div></div>
-          <div class="compare-point"><span>📱</span><div><strong>Shareability</strong><p>The unusual store environment is naturally suited to social media, creating awareness beyond traditional advertising.</p></div></div>
-          <div class="compare-point"><span>🔁</span><div><strong>Discovery loop</strong><p>Novel products can encourage customers to return to see what has changed, potentially converting curiosity into repeat visits.</p></div></div>
+  <!-- INTRO -->
+  <section id="intro" class="section">
+    <div class="container">
+      <div class="section-label fade-up">01 — Introduction</div>
+      <h2 class="section-title fade-up">What is Don Don Donki?</h2>
+      <div class="intro-grid fade-up">
+        <div class="intro-text">
+          <p><strong>Don Don Donki</strong> is a Japanese discount retail store that sells a wide range of products, including groceries, snacks, cosmetics, and household items. It is known for its Japanese imports and lively, crowded shopping environment, accompanied by a catchy in-store song. Operated by Pan Pacific International Holdings (PPIH), the chain has expanded internationally, with stores in Japan, Singapore, Hong Kong, Macau, Thailand, Taiwan, Malaysia, and parts of the United States.</p>
+          <p>Don Don Donki originated from Japan's Don Quijote chain, founded in 1980, and later expanded overseas under the "Don Don Donki" brand. The company entered Southeast Asia in 2017 with its first store in Singapore, and has since expanded across Asia, including Hong Kong, Thailand, Taiwan, and Malaysia.
+            In Singapore, its first outlet opened in Orchard Central in 2017 and the chain has grown to 16 stores as of mid-2026, one of PPIH's more established overseas markets.
+            In Malaysia, Don Don Donki expanded into Kuala Lumpur in 2021; as of mid-2026 it operates 2 stores, down from 4 the previous year — a reduction that sits inside a broader, group-wide closure of underperforming Asia stores rather than a Malaysia-only story (see Section 09).</p>
+        </div>
+        <div class="intro-stats">
+          <div class="stat-card fade-up delay-1">
+            <div class="stat-num">1980</div>
+            <div class="stat-label">Founded in Japan</div>
+          </div>
+          <div class="stat-card fade-up delay-2">
+            <div class="stat-num">2017</div>
+            <div class="stat-label">Singapore entry</div>
+          </div>
+          <div class="stat-card fade-up delay-3">
+            <div class="stat-num">2021</div>
+            <div class="stat-label">Malaysia entry</div>
+          </div>
+          <div class="stat-card fade-up delay-4">
+            <div class="stat-num">799</div>
+            <div class="stat-label">Group stores, Jun 2026</div>
+          </div>
         </div>
       </div>
-      <div class="compare-panel hidden" id="experience-my">
-        <div class="compare-header"><span class="verdict">CONTEXT MISMATCH RISK</span><h3>Malaysia: Experience needs stronger localisation</h3></div>
-        <div class="compare-body">
-          <div class="compare-point"><span>🛒</span><div><strong>Efficiency trade-off</strong><p>A dense layout creates value only when customers perceive the search process as enjoyable rather than inconvenient.</p></div></div>
-          <div class="compare-point"><span>🕌</span><div><strong>Food accessibility</strong><p>For a Muslim-majority market, the availability and visibility of halal options can materially affect whether the food experience is broadly accessible.</p></div></div>
-          <div class="compare-point"><span>💰</span><div><strong>Price context</strong><p>If imported products feel expensive, the entertainment value of discovery may not compensate for the price difference.</p></div></div>
-          <div class="compare-point"><span>🔁</span><div><strong>Curiosity versus habit</strong><p>Initial curiosity does not automatically become regular grocery behaviour. Repeat-purchase categories are therefore critical.</p></div></div>
+      <div class="research-box fade-up">
+        <div class="rq-label">Research Question</div>
+        <p class="rq-text">Why does Donki's Japanese retail model perform differently across markets, and how should the company adapt its product, pricing, placement, promotion and operations to make the model work internationally — using Singapore and Malaysia as the core comparison?</p>
+      </div>
+
+      <div class="framework-intro fade-up">
+        <p class="framework-lead">This research tests six questions, one per section of the site:</p>
+        <div class="framework-grid">
+          <div class="fw-card"><div class="fw-num">Product</div><p>Does Donki sell the right products for the local market?</p></div>
+          <div class="fw-card"><div class="fw-num">Price</div><p>Are those products affordable relative to local purchasing power?</p></div>
+          <div class="fw-card"><div class="fw-num">Placement</div><p>Are stores located where enough target customers actually exist?</p></div>
+          <div class="fw-card"><div class="fw-num">Promotion</div><p>Is Donki communicating the right value proposition to the right segment?</p></div>
+          <div class="fw-card"><div class="fw-num">Operations</div><p>Can the supply chain support competitive prices and healthy margins?</p></div>
+          <div class="fw-card"><div class="fw-num">Economics</div><p>Can individual stores actually make enough money to justify expansion?</p></div>
         </div>
       </div>
     </div>
-    <div class="insight-callout fade-up"><span>→</span><p><strong>Key insight:</strong> Donki's experience is a competitive advantage, but it works best when the rest of the business system makes the experience useful enough to repeat.</p></div>
-  </div>
-</section>
+  </section>
 
-<section id="product" class="section section--cream">
-  <div class="container">
-    <div class="section-label fade-up">03 — Product</div>
-    <h2 class="section-title fade-up">Is Donki selling the right products?</h2>
-    <p class="section-intro fade-up">Donki's assortment has different strategic jobs. A strong international store should balance products that attract attention with products that create regular purchasing.</p>
-    <div class="product-grid fade-up">
-      <article class="product-card"><span class="product-num">01</span><h3>Japanese Food</h3><p>Creates authenticity and differentiation through products associated with Japan.</p><b>ROLE → DIFFERENTIATION</b></article>
-      <article class="product-card"><span class="product-num">02</span><h3>Fresh / Perishable</h3><p>Can support frequency because food is purchased repeatedly rather than only for novelty.</p><b>ROLE → FREQUENCY</b></article>
-      <article class="product-card"><span class="product-num">03</span><h3>Snacks</h3><p>Supports discovery, impulse purchases and the treasure-hunt experience.</p><b>ROLE → IMPULSE</b></article>
-      <article class="product-card"><span class="product-num">04</span><h3>Cosmetics & Beauty</h3><p>Uses the reputation of Japanese beauty products and can support willingness to pay.</p><b>ROLE → DIFFERENTIATION</b></article>
-      <article class="product-card"><span class="product-num">05</span><h3>Household Essentials</h3><p>Creates repeat demand but also places Donki into direct price competition with supermarkets.</p><b>ROLE → RETENTION</b></article>
-      <article class="product-card"><span class="product-num">06</span><h3>Ready-to-Eat</h3><p>Can bridge the gap between Japanese identity and everyday consumption.</p><b>ROLE → FREQUENCY</b></article>
-      <article class="product-card"><span class="product-num">07</span><h3>Imported Brands</h3><p>Provides access to products that customers may struggle to find in mainstream retailers.</p><b>ROLE → ACCESS</b></article>
-      <article class="product-card"><span class="product-num">08</span><h3>Local Products</h3><p>Can improve relevance and reduce the need for every purchase to carry an import premium.</p><b>ROLE → LOCALISATION</b></article>
-    </div>
-
-    <div class="two-column fade-up">
-      <div class="analysis-box">
-        <span class="box-label">CURIOSITY</span>
-        <h3>Products that make people visit</h3>
-        <p>Limited snacks, unusual flavours, seasonal items and highly Japanese products can create the initial reason to visit.</p>
-        <div class="arrow-down">↓</div>
-        <strong>FIRST PURCHASE</strong>
+  <!-- STORE SIMULATOR (unchanged) -->
+  <section id="store-sim" class="section section--dark">
+    <div class="container">
+      <div class="section-label fade-up" style="color: var(--yellow);">Interactive — Walk The Store</div>
+      <h2 class="section-title fade-up" style="color:#fff;">Step Inside Don Don Donki</h2>
+      <p class="section-intro fade-up" style="color:#aaa;">
+        Click on any area of the store map below to explore it. Each zone reveals what Donki does — and what that means for its strategy in Singapore and Malaysia.
+      </p>
+      <div class="store-floorplan fade-up">
+        <div class="fp-zone fp-entrance" data-zone="entrance">
+          <img src="images/entrance.jpg" alt="Donki Entrance" class="fp-zone-img" />
+          <div class="fp-zone-overlay">
+            <span class="fp-zone-icon">🚪</span>
+            <span class="fp-zone-label">Signage</span>
+            <span class="fp-zone-hint">Click to explore</span>
+          </div>
+        </div>
+        <div class="fp-zone fp-food" data-zone="food">
+          <img src="images/food-hall.jpg" alt="Food Hall" class="fp-zone-img" />
+          <div class="fp-zone-overlay">
+            <span class="fp-zone-icon">🍱</span>
+            <span class="fp-zone-label">Food Hall &<br>Dining</span>
+            <span class="fp-zone-hint">Click to explore</span>
+          </div>
+        </div>
+        <div class="fp-zone fp-snacks" data-zone="snacks">
+          <img src="images/snacks.jpg" alt="Snacks Aisle" class="fp-zone-img" />
+          <div class="fp-zone-overlay">
+            <span class="fp-zone-icon">🍫</span>
+            <span class="fp-zone-label">Snacks &<br>Japan Imports</span>
+            <span class="fp-zone-hint">Click to explore</span>
+          </div>
+        </div>
+        <div class="fp-zone fp-signage" data-zone="signage">
+          <img src="images/signage.jpg" alt="Store Signage" class="fp-zone-img" />
+          <div class="fp-zone-overlay">
+            <span class="fp-zone-icon">📢</span>
+            <span class="fp-zone-label">Store Layout &<br>Signage</span>
+            <span class="fp-zone-hint">Click to explore</span>
+          </div>
+        </div>
+        <div class="fp-zone fp-cosmetics" data-zone="cosmetics">
+          <img src="images/cosmetics.jpg" alt="Cosmetics Section" class="fp-zone-img" />
+          <div class="fp-zone-overlay">
+            <span class="fp-zone-icon">💄</span>
+            <span class="fp-zone-label">Cosmetics &<br>Lifestyle</span>
+            <span class="fp-zone-hint">Click to explore</span>
+          </div>
+        </div>
+        <div class="fp-zone fp-checkout" data-zone="checkout">
+          <img src="images/checkout.jpg" alt="Checkout Area" class="fp-zone-img" />
+          <div class="fp-zone-overlay">
+            <span class="fp-zone-icon">🏷️</span>
+            <span class="fp-zone-label">Checkout &<br>Pricing</span>
+            <span class="fp-zone-hint">Click to explore</span>
+          </div>
+        </div>
       </div>
-      <div class="analysis-box analysis-box--dark">
-        <span class="box-label">LOYALTY</span>
-        <h3>Products that make people return</h3>
-        <p>Fresh food, ready-to-eat products, personal care and selected household items can create more frequent purchasing occasions.</p>
-        <div class="arrow-down">↓</div>
-        <strong>REPEAT PURCHASE</strong>
+      <div class="fp-panel" id="fpPanel">
+        <button class="fp-panel-close" id="fpPanelClose">✕ Close</button>
+        <div class="fp-panel-img-wrap">
+          <img src="" alt="" id="fpPanelImg" />
+          <div class="fp-panel-img-caption" id="fpPanelCaption"></div>
+        </div>
+        <div class="fp-panel-badge" id="fpPanelBadge"></div>
+        <h3 class="fp-panel-title" id="fpPanelTitle"></h3>
+        <div class="fp-panel-body" id="fpPanelBody"></div>
+        <div class="fp-panel-compare" id="fpPanelCompare"></div>
+      </div>
+      <div class="fp-dim" id="fpDim"></div>
+    </div>
+  </section>
+
+  <!-- SECTION 1: EXPERIENTIAL RETAIL -->
+  <section id="s1-experiential" class="section">
+    <div class="container">
+      <div class="section-label fade-up">02 — Argument One</div>
+      <h2 class="section-title fade-up">Experiential Retail:<br>Where the Story Starts, Not Where It Ends</h2>
+      <div class="concept-intro fade-up">
+        <p><strong>Experiential retail refers to a store design philosophy that prioritises sensory engagement, discovery, and emotional stimulation over transactional efficiency.</strong> Rather than organising products logically for quick purchase, experiential retailers deliberately create complexity through densely packed shelves, unexpected product adjacencies, and stimulating visuals and sounds to encourage extended dwell time, impulse purchases, and repeat visits.</p>
+        <p>Donki's version of this, sometimes called the <em>"compressed display"</em> or <em>"treasure hunt"</em> model, is central to its brand identity. But experience is only the first link in a longer chain — it earns attention, not automatically a profitable business. The rest of this research follows that chain link by link.</p>
+      </div>
+
+      <div class="chain-diagram fade-up">
+        <div class="chain-link"><span class="chain-num">1</span>Experience<small>creates attention</small></div>
+        <div class="chain-arrow">→</div>
+        <div class="chain-link"><span class="chain-num">2</span>Product<small>creates differentiation</small></div>
+        <div class="chain-arrow">→</div>
+        <div class="chain-link"><span class="chain-num">3</span>Price<small>creates value perception</small></div>
+        <div class="chain-arrow">→</div>
+        <div class="chain-link"><span class="chain-num">4</span>Place<small>determines who can reach it</small></div>
+        <div class="chain-arrow">→</div>
+        <div class="chain-link"><span class="chain-num">5</span>Promotion<small>creates awareness</small></div>
+        <div class="chain-arrow">→</div>
+        <div class="chain-link"><span class="chain-num">6</span>Repeat visits<small>build lifetime value</small></div>
+        <div class="chain-arrow">→</div>
+        <div class="chain-link chain-link--final"><span class="chain-num">7</span>Store economics<small>decide if it's worth it</small></div>
+      </div>
+
+      <div class="compare-toggle-wrapper fade-up">
+        <div class="compare-toggle-btns">
+          <button class="toggle-btn active" id="btnSG" onclick="showCompare('sg')">🇸🇬 Singapore</button>
+          <button class="toggle-btn" id="btnMY" onclick="showCompare('my')">🇲🇾 Malaysia</button>
+        </div>
+        <div class="compare-panel" id="panel-sg">
+          <div class="compare-header sg-header">
+            <span class="compare-verdict verdict-success">Strong fit</span>
+            <h3>Singapore: Dense Layout Read as Entertainment</h3>
+          </div>
+          <div class="compare-body">
+            <div class="compare-point">
+              <div class="point-icon">🏙️</div>
+              <div><strong>Urban Consumer Profile</strong><p>Singapore's highly urbanised, internationally-exposed consumer base has experience with diverse retail formats, including Japanese convenience stores and specialty retailers. This familiarity may reduce the mental effort of navigating Donki's dense layouts, though this is a plausible explanation rather than a measured one.</p></div>
+            </div>
+            <div class="compare-point">
+              <div class="point-icon">🎌</div>
+              <div><strong>Japan Exposure (Hypothesis)</strong><p>Singapore has a well-documented cultural affinity for Japanese products and pop culture. In 2025, roughly 726,200 Singaporeans (about 12–13% of the resident population) travelled to Japan, per Time Out Singapore citing Japan National Tourism Organisation data. This is a proxy for exposure, not proof of a causal link to Donki demand — see Section 04 for how this hypothesis could actually be tested.</p></div>
+            </div>
+            <div class="compare-point">
+              <div class="point-icon">📱</div>
+              <div><strong>Social Media Virality</strong><p>The store's aesthetic — bright lights, packed shelves, the Donki penguin mascot — is highly shareable. This appears to support footfall at flagship outlets like Orchard Central, though verified visitor-attribution data is not publicly available.</p></div>
+            </div>
+            <div class="compare-point">
+              <div class="point-icon">🔁</div>
+              <div><strong>Discovery as Habit</strong><p>Some Singapore shoppers report enjoying the unpredictability of Donki — finding something different each visit. This anecdotal pattern aligns with the treasure-hunt model's value proposition, though it is drawn from consumer commentary rather than a controlled survey.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="compare-panel hidden" id="panel-my">
+          <div class="compare-header my-header">
+            <span class="compare-verdict verdict-fail">Requires more localisation</span>
+            <h3>Malaysia: A Format Still Being Adapted</h3>
+          </div>
+          <div class="compare-body">
+            <div class="compare-point">
+              <div class="point-icon">😵</div>
+              <div><strong>Format Familiarity Gap</strong><p>Malaysian consumers, particularly outside Kuala Lumpur, have had less prior exposure to this specific Japanese retail format. Without that familiarity, a dense, non-linear layout may read as disorganised rather than playful — a hypothesis consistent with anecdotal shopper feedback, not a confirmed finding.</p></div>
+            </div>
+            <div class="compare-point">
+              <div class="point-icon">🛒</div>
+              <div><strong>Preference for Clear Navigation</strong><p>Some Malaysian shopper commentary points to a preference for clearer product categorisation. Donki's deliberate complexity — a brand asset in Japan and Singapore — may be perceived differently in a market with a strong, well-organised hypermarket culture.</p></div>
+            </div>
+            <div class="compare-point">
+              <div class="point-icon">🏪</div>
+              <div><strong>Established Local Competition</strong><p>Malaysia has an entrenched hypermarket and supermarket culture (AEON, Lotus's, Giant, Village Grocer), offering clear navigation, halal certification throughout, and competitive prices. Donki's "experience" premium has to be justified against well-understood local alternatives.</p></div>
+            </div>
+            <div class="compare-point">
+              <div class="point-icon">📉</div>
+              <div><strong>Curiosity vs. Habit</strong><p>Malaysia's Asia-segment store count fell during FY6/26 as PPIH rationalised underperforming outlets group-wide (see Section 09). This is consistent with — though does not on its own prove — a pattern where initial curiosity traffic did not convert into the routine repeat-visit behaviour the format depends on.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="insight-callout fade-up">
+        <div class="insight-icon">💡</div>
+        <p><strong>Key Insight:</strong> Experiential retail is not universally appealing on its own terms. Its effectiveness depends on the customer's pre-existing familiarity with the format and their willingness to trade efficiency for entertainment — conditions this research treats as testable hypotheses, not settled facts, throughout the sections below.</p>
       </div>
     </div>
+  </section>
 
-    <div class="hypothesis-box fade-up">
-      <div class="hypothesis-tag">HYPOTHESIS — TO BE TESTED</div>
-      <h3>Does exposure to Japan contribute to stronger Donki demand?</h3>
-      <p>Greater exposure to Japan may increase familiarity with Japanese products and therefore contribute to stronger demand for Donki's assortment. This should be treated as an association to test, not a proven causal relationship.</p>
-      <div class="hypothesis-flow"><span>JAPAN EXPOSURE</span><i>→</i><span>PRODUCT FAMILIARITY</span><i>→</i><span>PURCHASE</span><i>→</i><span>REPEAT</span></div>
-      <div class="test-grid">
-        <span>Travel frequency</span><span>Japanese food familiarity</span><span>Donki Japan visits</span><span>Japan-specific SKU sales</span><span>Basket size</span><span>Repeat visit rate</span>
+  <!-- SECTION: PRODUCT -->
+  <section id="s1b-product" class="section section--cream">
+    <div class="container">
+      <div class="section-label fade-up">03 — Argument Two</div>
+      <h2 class="section-title fade-up">Product:<br>Is Donki Selling the Right Things for Each Market?</h2>
+      <div class="concept-intro fade-up">
+        <p>Donki is not one product category — it is ten, and each plays a different strategic role. Treating "the Donki assortment" as a single undifferentiated block hides the fact that some categories exist to create buzz, and others exist to earn a place in a household's weekly shop.</p>
+      </div>
+
+      <div class="product-grid fade-up">
+        <div class="prod-card"><h4>Japanese Snacks</h4><span class="prod-role">Differentiation · Discovery</span><p>Drives impulse purchasing and cultural curiosity — the category most associated with the brand, but not necessarily the one that builds a habitual customer.</p></div>
+        <div class="prod-card"><h4>Fresh / Perishable Food</h4><span class="prod-role">Repeat purchase · Frequency</span><p>Everyday grocery behaviour. This is the category most likely to convert a curious visitor into a routine shopper — and the category most exposed to halal-certification requirements in Muslim-majority markets.</p></div>
+        <div class="prod-card"><h4>Cosmetics & Beauty</h4><span class="prod-role">Brand reputation · Cross-border winner</span><p>Japanese skincare and makeup carry strong pre-existing global demand, less culturally contingent than food, and travel well across markets — PPIH's own tax-free sales data shows cosmetics and confectionery as consistent growth categories across its Asia stores.</p></div>
+        <div class="prod-card"><h4>Household Essentials</h4><span class="prod-role">Repeat purchase · High price sensitivity</span><p>Directly comparable to supermarket staples, so this category competes head-on with local hypermarkets on price, with little room for a "Japan premium."</p></div>
+        <div class="prod-card"><h4>Ready-to-Eat Food</h4><span class="prod-role">Convenience · Frequency</span><p>Bento, onigiri and hot food counters — high-frequency purchases that build habitual visits when the halal/dietary range is broad enough to serve the whole target population.</p></div>
+        <div class="prod-card"><h4>Imported Japanese Brands</h4><span class="prod-role">Exclusivity · One-time curiosity</span><p>Products unavailable elsewhere locally. Strong at generating a first visit; weaker, on its own, at generating a tenth visit.</p></div>
+      </div>
+
+      <div class="two-col-block fade-up">
+        <div class="tc-panel">
+          <h3>Curiosity vs. Repeat Purchase</h3>
+          <p>A customer may visit once because they want to try an unusual Japanese snack. That does not necessarily create a profitable long-term customer. The categories that build customer lifetime value — fresh food, everyday essentials, personal care — are structurally different from the categories that build first-visit buzz. Donki's Singapore success appears to rest on doing <em>both</em> well; the open question for Malaysia is whether the repeat-purchase categories (particularly halal-compliant fresh food) are developed enough yet to convert curiosity into habit.</p>
+        </div>
+        <div class="tc-panel">
+          <h3>Customer Lifetime Value, Simply</h3>
+          <p class="clv-formula">CLV ≈ Average Basket &nbsp;×&nbsp; Purchase Frequency &nbsp;×&nbsp; Gross Margin &nbsp;×&nbsp; Customer Lifetime</p>
+          <p>A customer who spends $100 once is not necessarily more valuable than one who spends $60 a month for two years. This is why the categories in the left panel matter more than the headline "Japanese snacks" story: frequency and repeat visits compound, a single big basket does not.</p>
+        </div>
+      </div>
+
+      <div class="hypothesis-flow fade-up">
+        <div class="hf-label">Hypothesis, Not Fact</div>
+        <h3>"Greater exposure to Japan increases demand for Donki's assortment."</h3>
+        <p>This is the claim implicit in most casual explanations of Donki's Singapore success. It has not been proven here — it is a hypothesis that could be tested with data PPIH does not publish at the country level.</p>
+        <div class="hf-chain">
+          <div class="hf-step">Japan exposure<small>(tourism, media)</small></div>
+          <div class="hf-arrow">→</div>
+          <div class="hf-step">Product familiarity<small>(surveys)</small></div>
+          <div class="hf-arrow">→</div>
+          <div class="hf-step">Purchase behaviour<small>(basket data)</small></div>
+          <div class="hf-arrow">→</div>
+          <div class="hf-step">Repeat visits<small>(loyalty data)</small></div>
+        </div>
+        <p class="hf-note">A survey could ask: how often have you travelled to Japan? How familiar are you with Japanese food? How often do you visit Donki, and why? None of this would prove causation — it would let researchers test whether Japan exposure is <em>associated</em> with stronger Donki demand, which is a meaningfully weaker and more honest claim.</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="price" class="section">
-  <div class="container">
-    <div class="section-label fade-up">04 — Price</div>
-    <h2 class="section-title fade-up">Same tags. Different worlds.</h2>
-    <div class="concept-intro fade-up">
-      <p>Price perception is relative. A product can look inexpensive in a high-income market but expensive in a lower-income market even when the nominal price is identical.</p>
-      <p>The correct question is therefore not simply <strong>"Is Donki cheap?"</strong> but <strong>"How affordable is a Donki basket relative to local purchasing power and alternatives?"</strong></p>
-    </div>
-
-    <div class="income-visual fade-up">
-      <div class="income-card"><span>🇸🇬 SINGAPORE</span><strong>S$12,446</strong><small>2025 median monthly household market income</small></div>
-      <div class="income-arrow">VS</div>
-      <div class="income-card"><span>🇲🇾 MALAYSIA</span><strong>RM7,017</strong><small>2024 median monthly household gross income</small></div>
-      <div class="income-note">Currencies are not directly comparable. The figures establish different income contexts, not an exchange-rate-adjusted measure of living standards.</div>
-    </div>
-
-    <div class="pricing-cards fade-up">
-      <div class="price-card"><div class="price-card-header"><span>🇸🇬</span><h3>Singapore</h3><em>VALUE CAN BE STRONGER</em></div><ul><li>Higher household income can make imported Japanese products easier to absorb.</li><li>Donki can position itself as comparatively affordable within expensive retail districts.</li><li>Imported snacks and cosmetics can be perceived as reasonable when the perceived quality and uniqueness justify the price.</li></ul></div>
-      <div class="price-card"><div class="price-card-header"><span>🇲🇾</span><h3>Malaysia</h3><em>PRICE SENSITIVITY MATTERS</em></div><ul><li>Imported Japanese products may represent a larger share of household purchasing power.</li><li>Everyday products face strong competition from established local supermarkets.</li><li>A discount aesthetic cannot fully overcome a large underlying price difference.</li></ul></div>
-    </div>
-
-    <div class="benchmark-box fade-up">
-      <div><span class="box-label">PRICE BENCHMARKING FRAMEWORK</span><h3>Compare the same SKU, not vague impressions.</h3></div>
-      <div class="benchmark-row"><b>DONKI</b><span>SKU price</span><span>pack size</span><span>import status</span></div>
-      <div class="benchmark-row"><b>COMPETITOR</b><span>same SKU / equivalent</span><span>pack size</span><span>local or imported</span></div>
-      <p class="small-note">Current research does not provide a sufficiently matched Singapore–Malaysia dataset to claim a statistically robust price gap. Use this as a framework until comparable current prices are collected.</p>
-    </div>
-
-    <div class="value-items fade-up">
-      <div><strong>S$3.90</strong><span>Kameda Seed Snack 6-pack — historical Singapore example</span></div>
-      <div><strong>S$9.80</strong><span>Calpis Concentrate 1L — historical Singapore example</span></div>
-      <div><strong>S$2.50</strong><span>Japanese noodle snack — 2023 Singapore example</span></div>
-      <div><strong>S$5.90</strong><span>Oishii-Bo Mentaiko 6×30g — 2023 Singapore example</span></div>
-    </div>
-    <p class="small-note fade-up">These are dated illustrative examples, not current market-wide benchmarks. They should not be used to claim that Donki is universally cheaper.</p>
-  </div>
-</section>
-
-<section id="clv" class="section section--dark">
-  <div class="container">
-    <div class="section-label yellow fade-up">05 — Repeat Purchase</div>
-    <h2 class="section-title white fade-up">From curiosity to customer lifetime value</h2>
-    <div class="clv-grid fade-up">
-      <div class="clv-main">
-        <p>One of the most important weaknesses in a pure experiential-retail explanation is that a memorable first visit does not necessarily create a profitable customer.</p>
-        <div class="clv-formula"><span>Average Basket</span><b>×</b><span>Purchase Frequency</span><b>×</b><span>Gross Margin</span><b>×</b><span>Customer Lifetime</span></div>
-        <p class="muted">A customer who spends S$100 once may be less valuable than a customer who spends S$60 every month for two years. The exact CLV requires internal Donki data, but the logic changes how success should be evaluated.</p>
+  <!-- SECTION: COMPETITION & SEGMENTATION -->
+  <section id="s1c-competition" class="section">
+    <div class="container">
+      <div class="section-label fade-up">04 — Argument Three</div>
+      <h2 class="section-title fade-up">Competition Is Not One Store — And Neither Is the Customer</h2>
+      <div class="concept-intro fade-up">
+        <p>Donki does not have a single competitor. It competes for different parts of a customer's basket depending on what that customer is buying — and it should not treat all customers identically.</p>
       </div>
-      <div class="clv-funnel">
-        <div>ONE-TIME CURIOSITY</div><i>↓</i><div>FIRST PURCHASE</div><i>↓</i><div>SECOND VISIT</div><i>↓</i><div>REGULAR PURCHASE</div><i>↓</i><div class="highlight">HIGHER CLV</div>
+
+      <div class="comp-map fade-up">
+        <div class="comp-row"><strong>Japanese specialty products</strong><span>Japanese specialty retailers, online Japanese-product sellers, Meidi-Ya</span></div>
+        <div class="comp-row"><strong>Premium groceries</strong><span>Cold Storage / CS Fresh (SG), Village Grocer, Jaya Grocer (MY)</span></div>
+        <div class="comp-row"><strong>Mass / value groceries</strong><span>FairPrice, Sheng Siong (SG); AEON, Lotus's, Giant (MY)</span></div>
+        <div class="comp-row"><strong>Online grocery</strong><span>FairPrice Online, RedMart, GrabMart, foodpanda, Shopee</span></div>
+      </div>
+      <p class="framework-note fade-up">This is not a claim that all of these are equally direct competitors — only that Donki competes for different baskets against different specialists, so a single "who is Donki's competitor" framing understates the strategic picture.</p>
+
+      <div class="segment-grid fade-up">
+        <div class="seg-card">
+          <h4>Value-Conscious</h4>
+          <p>Priorities: low prices, promotions, essentials, large packs, convenience. Needs Donki to win on everyday staples, not novelty.</p>
+        </div>
+        <div class="seg-card">
+          <h4>Savvy / Discovery Shopper</h4>
+          <p>Priorities: good value plus unique products — Japanese brands, discovery, quality. The segment the "treasure hunt" model is built for.</p>
+        </div>
+        <div class="seg-card">
+          <h4>Premium / Experience Seeker</h4>
+          <p>Priorities: authenticity, exclusivity, the shopping experience itself. Least price-sensitive, but smallest segment by volume.</p>
+        </div>
+      </div>
+      <div class="insight-callout fade-up">
+        <div class="insight-icon">💡</div>
+        <p><strong>Key Insight:</strong> A single store format cannot optimally serve all three segments with identical products, prices and promotions. Section 07 (Placement) and Section 08 (Promotion) return to this: different catchment areas likely contain different segment mixes, and PPIH's own Asia strategy (Section 09) explicitly talks about building "store models tailored to local catchment areas."</p>
       </div>
     </div>
-    <div class="metric-strip fade-up"><span>Repeat visits</span><span>Basket size</span><span>Frequency</span><span>Margin</span><span>Retention</span><span>Category mix</span></div>
-  </div>
-</section>
+  </section>
 
-<section id="competition" class="section section--cream">
-  <div class="container">
-    <div class="section-label fade-up">06 — Competition & Customers</div>
-    <h2 class="section-title fade-up">Donki does not have one competitor.</h2>
-    <p class="section-intro fade-up">Competition changes depending on what is inside the customer's basket. This makes segmented competition more useful than simply naming one rival retailer.</p>
-    <div class="competition-grid fade-up">
-      <div class="comp-card"><span>JAPANESE SPECIALTY</span><h3>Specialty retailers + online sellers</h3><p>Compete for Japanese imports, snacks, cosmetics and hard-to-find products.</p></div>
-      <div class="comp-card"><span>PREMIUM GROCERY</span><h3>Cold Storage · Village Grocer · Jaya Grocer</h3><p>Compete for premium grocery shoppers and imported food.</p></div>
-      <div class="comp-card"><span>MASS / VALUE</span><h3>FairPrice · Sheng Siong · AEON · Lotus's · Giant</h3><p>Compete strongly for everyday essentials and price-sensitive purchases.</p></div>
-      <div class="comp-card"><span>ONLINE</span><h3>FairPrice Online · RedMart · GrabMart · foodpanda · Shopee</h3><p>Compete for convenience, price comparison and home delivery.</p></div>
-    </div>
-
-    <div class="segment-grid fade-up">
-      <div class="segment-card"><span>01</span><h3>Value-Conscious</h3><p>Priorities: low prices, promotions, essentials, convenience and pack size.</p><b>BEST RESPONSE → VALUE</b></div>
-      <div class="segment-card featured"><span>02</span><h3>Savvy / Discovery</h3><p>Priorities: unique products, Japanese brands, quality and good value.</p><b>BEST RESPONSE → DISCOVERY + VALUE</b></div>
-      <div class="segment-card"><span>03</span><h3>Premium / Experience</h3><p>Priorities: authenticity, exclusivity, Japanese quality and the shopping experience.</p><b>BEST RESPONSE → EXPERIENCE</b></div>
-    </div>
-    <div class="insight-callout fade-up"><span>→</span><p><strong>Key insight:</strong> Donki should not treat all customers identically. Different segments require different product mixes, prices, promotions and potentially different store formats.</p></div>
-  </div>
-</section>
-
-<section id="placement" class="section">
-  <div class="container">
-    <div class="section-label fade-up">07 — Placement</div>
-    <h2 class="section-title fade-up">The store can only sell to people who can reach it.</h2>
-    <div class="placement-intro fade-up"><p>Location is more than footfall. A good Donki site needs enough of the <strong>right</strong> customers, with enough spending capacity and enough reason to visit repeatedly.</p></div>
-    <div class="catchment-grid fade-up">
-      <div><span>01</span><h3>Footfall</h3><p>How many people pass through the catchment?</p></div>
-      <div><span>02</span><h3>Target Fit</h3><p>How many are likely to value Japanese products?</p></div>
-      <div><span>03</span><h3>Spending Power</h3><p>Can the catchment support the intended basket?</p></div>
-      <div><span>04</span><h3>Competition</h3><p>How many alternatives already serve the same need?</p></div>
-      <div><span>05</span><h3>Access</h3><p>Can customers reach the store conveniently?</p></div>
-      <div><span>06</span><h3>Repeat Potential</h3><p>Is the location suitable for regular shopping, not just tourism?</p></div>
-    </div>
-    <div class="case-study fade-up">
-      <div class="case-tag">CASE STUDY — KUALA LUMPUR</div>
-      <h3>Mid Valley as a useful test of the catchment idea</h3>
-      <p>Mid Valley Megamall provides a strong example of why location needs to be analysed through catchment characteristics rather than a simple "good mall / bad mall" judgement. A high-traffic site can generate awareness, but long-term performance still depends on the match between visitors, product mix, pricing and repeat-purchase behaviour.</p>
-      <div class="case-score"><span>FOOTFALL <b>HIGH POTENTIAL</b></span><span>TARGET FIT <b>TEST</b></span><span>REPEAT <b>UNKNOWN</b></span><span>ECONOMICS <b>UNKNOWN</b></span></div>
-    </div>
-  </div>
-</section>
-
-<section id="promotion" class="section section--cream">
-  <div class="container">
-    <div class="section-label fade-up">08 — Promotion</div>
-    <h2 class="section-title fade-up">Two different reasons to buy</h2>
-    <div class="promo-grid fade-up">
-      <div class="promo-card promo-card--yellow"><span>VALUE PROPOSITION 01</span><h3>"Look what I found."</h3><p>Novel Japanese products, limited items and unusual snacks create discovery and social sharing.</p><strong>BEST FOR → ACQUISITION</strong></div>
-      <div class="promo-card promo-card--dark"><span>VALUE PROPOSITION 02</span><h3>"This is worth coming back for."</h3><p>Fresh food, everyday products, useful promotions and reliable value create a reason for regular visits.</p><strong>BEST FOR → RETENTION</strong></div>
-    </div>
-    <div class="promotion-loop fade-up"><span>CONTENT</span><i>→</i><span>STORE VISIT</span><i>→</i><span>PURCHASE</span><i>→</i><span>SHARE</span><i>→</i><span>RETURN</span></div>
-    <div class="analysis-box fade-up"><span class="box-label">LOCALISATION QUESTION</span><h3>Should the message change by market?</h3><p>Yes, potentially. A market where consumers already understand Japanese novelty may need less explanation of the "Japan" proposition. A market with stronger price competition may need clearer value communication and more locally relevant products.</p></div>
-  </div>
-</section>
-
-<section id="operations" class="section section--dark">
-  <div class="container">
-    <div class="section-label yellow fade-up">09 — Supply Chain & Operations</div>
-    <h2 class="section-title white fade-up">Japanese sourcing is an advantage — and a constraint.</h2>
-    <div class="operations-grid fade-up">
-      <div class="ops-card"><span>01</span><h3>Authenticity</h3><p>Direct Japanese sourcing supports Donki's differentiation and brand identity.</p></div>
-      <div class="ops-card"><span>02</span><h3>Import Costs</h3><p>Shipping, duties, handling, spoilage and exchange rates can affect final prices.</p></div>
-      <div class="ops-card"><span>03</span><h3>Certification</h3><p>Products entering different markets may face different regulatory and certification requirements.</p></div>
-      <div class="ops-card"><span>04</span><h3>Local Sourcing</h3><p>Selected local products can reduce cost and improve relevance without removing the Japanese core.</p></div>
-    </div>
-    <div class="supply-chain fade-up"><span>JAPAN SUPPLIERS</span><i>→</i><span>IMPORT</span><i>→</i><span>CERTIFICATION</span><i>→</i><span>STORE</span><i>→</i><span>CUSTOMER</span></div>
-    <div class="example-box fade-up">
-      <div class="example-label">ILLUSTRATIVE LOGIC — SENSODYNE-STYLE THINKING</div>
-      <p>If a product has strong demand but importing it creates a cost or regulatory barrier, management can ask whether the same customer need can be served by a locally sourced or locally certified alternative. The point is not to replace Donki's Japanese identity; it is to localise the parts of the assortment where the Japanese supply chain creates unnecessary friction.</p>
-    </div>
-  </div>
-</section>
-
-<section id="economics" class="section">
-  <div class="container">
-    <div class="section-label fade-up">10 — Store Economics</div>
-    <h2 class="section-title fade-up">Can the store actually make money?</h2>
-    <p class="section-intro fade-up">A compelling concept is not enough. Every store must eventually generate sufficient contribution to justify its rent, labour, inventory and other operating costs.</p>
-    <div class="economics-equation fade-up"><span>SALES</span><b>−</b><span>COGS</span><b>−</b><span>LABOUR</span><b>−</b><span>RENT</span><b>−</b><span>OTHER OPEX</span><b>=</b><strong>STORE CONTRIBUTION</strong></div>
-    <div class="break-even-box fade-up">
-      <div class="break-even-head"><span>HYPOTHETICAL MODEL — NOT DONKI'S ACTUAL DATA</span><h3>Break-even thinking</h3></div>
-      <div class="be-grid">
-        <label>Monthly fixed costs<input id="fixedCost" type="number" value="300000" min="0"></label>
-        <label>Gross margin<input id="margin" type="number" value="30" min="1" max="99"></label>
-        <label>Average basket<input id="basket" type="number" value="45" min="1"></label>
+  <!-- SECTION 2: PRICING (kept + expanded) -->
+  <section id="s2-pricing" class="section section--cream">
+    <div class="container">
+      <div class="section-label fade-up">05 — Argument Four</div>
+      <h2 class="section-title fade-up">Pricing Strategy:<br>Same Tags, Different Purchasing Power</h2>
+      <div class="concept-intro fade-up">
+        <p>Price perception is relative, not absolute. The same price point can be "affordable quality" in one market and an "unjustifiable premium" in another. Donki's pricing appears relatively standardised across Southeast Asian markets, which creates fundamentally different value propositions depending on local purchasing power.</p>
       </div>
-      <div class="be-result"><span>Illustrative monthly sales required</span><strong id="beSales">S$1,000,000</strong><small id="beTransactions">≈ 22,223 transactions/month</small></div>
-      <p class="small-note">This calculator is deliberately hypothetical. It demonstrates the logic management would use; it does not estimate an actual Donki store's break-even point.</p>
-    </div>
-    <div class="unknown-grid fade-up">
-      <div class="known"><span>KNOWN</span><h3>Group / segment evidence</h3><p>PPIH reported 799 group stores at June 30, 2026 and Asia segment performance can be observed at regional level.</p></div>
-      <div class="proxy"><span>PROXY</span><h3>Market-level indicators</h3><p>Income, household spending, tourism, competition and store locations can help explain likely market conditions.</p></div>
-      <div class="unknown"><span>UNKNOWN</span><h3>Country-level store economics</h3><p>Public information does not provide enough country-level Donki data to calculate actual Singapore versus Malaysia store profitability.</p></div>
-    </div>
-  </div>
-</section>
 
-<section id="expansion" class="section section--cream">
-  <div class="container">
-    <div class="section-label fade-up">11 — International Expansion</div>
-    <h2 class="section-title fade-up">Do not export one identical store.<br>Export a localisable system.</h2>
-    <div class="network-stats fade-up">
-      <div><strong>16</strong><span>Singapore</span></div><div><strong>10</strong><span>Hong Kong</span></div><div><strong>8</strong><span>Thailand</span></div><div><strong>6</strong><span>Taiwan</span></div><div><strong>2</strong><span>Malaysia</span></div><div><strong>2</strong><span>Macau</span></div><div><strong>79</strong><span>North America</span></div><div class="total"><strong>799</strong><span>Group total</span></div>
-    </div>
-    <p class="small-note fade-up">PPIH FY6/26 figures, June 30, 2026. North America is shown as a regional total; country-level and group-level figures should not be treated as equivalent measures.</p>
-
-    <div class="asia-insight fade-up"><span>ASIA SEGMENT</span><strong>¥99.1bn</strong><p>Net sales, FY6/26; operating margin improved to 5.5%. PPIH attributed improvement partly to closure of underperforming locations and traffic shifting to remaining stores.</p></div>
-
-    <div class="matrix fade-up">
-      <div class="matrix-head"><span>MARKET</span><span>PRODUCT FIT</span><span>PRICE FIT</span><span>LOCATION</span><span>OPERATIONS</span><span>DECISION</span></div>
-      <div><span>🇸🇬 Singapore</span><b>HIGH</b><b>HIGHER</b><b>HIGH</b><b>STRONG</b><strong>DEEPEN</strong></div>
-      <div><span>🇲🇾 Malaysia</span><b>TEST</b><b>LOWER</b><b>SELECTIVE</b><b>LOCALISE</b><strong>SELECTIVE</strong></div>
-      <div><span>🇹🇭 Thailand</span><b>TEST</b><b>TEST</b><b>SELECTIVE</b><b>LOCALISE</b><strong>LEARN</strong></div>
-      <div><span>🇻🇳 Vietnam</span><b>RESEARCH</b><b>RESEARCH</b><b>RESEARCH</b><b>BUILD</b><strong>PILOT</strong></div>
-      <div><span>🇮🇩 Indonesia</span><b>RESEARCH</b><b>RESEARCH</b><b>RESEARCH</b><b>BUILD</b><strong>PILOT</strong></div>
-    </div>
-    <p class="small-note fade-up">The matrix is a management framework, not a claim that all listed markets have identical performance. New-market decisions should be based on local evidence.</p>
-  </div>
-</section>
-
-<section id="recommendations" class="section">
-  <div class="container">
-    <div class="section-label fade-up">12 — Management Recommendations</div>
-    <h2 class="section-title fade-up">What should Donki do?</h2>
-    <div class="recommendation-grid fade-up">
-      <article><span>01</span><h3>Keep the Japanese core</h3><p>Do not remove the differentiation that makes Donki distinctive. Localise around the core rather than replacing it.</p></article>
-      <article><span>02</span><h3>Build local assortment layers</h3><p>Increase locally relevant everyday products where imported goods create unnecessary price or regulatory friction.</p></article>
-      <article><span>03</span><h3>Design for repeat purchase</h3><p>Measure the share of the assortment that creates regular visits, not only novelty traffic.</p></article>
-      <article><span>04</span><h3>Use catchment-first expansion</h3><p>Open stores only where target customers, spending power, access and repeat potential are strong enough.</p></article>
-      <article><span>05</span><h3>Segment the value proposition</h3><p>Promote discovery to experience-led customers and clear savings to value-conscious customers.</p></article>
-      <article><span>06</span><h3>Require store-level evidence</h3><p>Use sales, margin, rent, basket size, frequency and contribution before approving additional expansion.</p></article>
-    </div>
-    <div class="decision-rule fade-up"><span>MANAGEMENT RULE</span><strong>EXPAND ONLY WHEN LOCAL FIT + REPEAT DEMAND + STORE ECONOMICS ALIGN.</strong></div>
-  </div>
-</section>
-
-<section id="conclusion" class="section section--dark">
-  <div class="container">
-    <div class="section-label yellow fade-up">13 — Conclusion</div>
-    <h2 class="section-title white fade-up">Not one store model.<br>A business system.</h2>
-    <div class="conclusion-grid fade-up">
-      <div class="conclusion-main">
-        <p>Donki's Singapore–Malaysia comparison shows why experiential retail should not be treated as a complete international strategy. The treasure-hunt environment creates attention, but attention must be converted into purchases, repeat behaviour and profitable stores.</p>
-        <p>Singapore appears to provide a stronger combination of conditions for Donki: high purchasing power, international exposure, established interest in Japanese products and strong urban catchments. Malaysia presents a different environment in which price sensitivity, local competition, halal accessibility, product localisation and store-level economics become more important.</p>
-        <p>The evidence therefore supports a more nuanced conclusion than "Singapore succeeded and Malaysia failed." PPIH's FY6/26 store rationalisation across Asia shows that underperforming locations were being addressed as part of a broader portfolio strategy. Malaysia's store-count reduction is evidence that expansion needs to be selective, but it does not by itself prove that localisation was the sole cause.</p>
+      <div class="pricing-visual fade-up">
+        <h3 class="chart-title">Purchasing Power in Context — Verified Official Figures</h3>
+        <p class="chart-sub">Household gross income, 2024–2025, from SingStat and DOSM (Malaysia's national statistics department)</p>
+        <div class="bar-chart-wrapper">
+          <div class="bar-group">
+            <div class="bar-label">Median Monthly Household Income (2024–2025)</div>
+            <div class="bar-track">
+              <div class="bar bar--sg" style="--pct: 90%"><span class="bar-val">S$12,446</span></div>
+              <div class="bar-country">🇸🇬 Singapore — median monthly household <em>market</em> income, 2025 (SingStat, released Feb 2026)</div>
+            </div>
+            <div class="bar-track">
+              <div class="bar bar--my" style="--pct: 58%"><span class="bar-val">RM8,139</span></div>
+              <div class="bar-country">🇲🇾 Malaysia, <strong>urban</strong> households — median monthly gross income, 2024 (DOSM Household Income Survey, published Oct 2025)</div>
+            </div>
+            <div class="bar-track">
+              <div class="bar bar--my" style="--pct: 77%"><span class="bar-val">RM10,802</span></div>
+              <div class="bar-country">🇲🇾 W.P. Kuala Lumpur specifically — median monthly gross income, 2024 (DOSM)</div>
+            </div>
+          </div>
+        </div>
+        <p class="chart-footnote">These are two different currencies and two different income concepts (Singapore's figure is "market income"; Malaysia's is "gross income"), so the bars illustrate relative scale, not a precise like-for-like ratio. Even restricting the Malaysian comparison to Kuala Lumpur — the country's highest-income urban centre and Donki's actual market — median household income remains well below Singapore's. Nationally, Malaysian households spend an average of 74.5% of disposable income on consumption (DOSM, 2024), underlining limited headroom for a "Japan premium" on everyday items.</p>
       </div>
-      <div class="thesis-box">
-        <div class="thesis-label">CORE THESIS</div>
-        <p>Donki should not export one identical store model. It should export a <strong>business system that can be localised.</strong></p>
-        <div class="thesis-pillars">
-          <div><b>01</b><span><strong>EXPERIENCE</strong><br>Creates attention and differentiation.</span></div>
-          <div><b>02</b><span><strong>4Ps</strong><br>Align product, price, place and promotion with the market.</span></div>
-          <div><b>03</b><span><strong>OPERATIONS</strong><br>Make the supply chain and store economics viable.</span></div>
-          <div><b>04</b><span><strong>REPEAT</strong><br>Turn curiosity into customer lifetime value.</span></div>
+
+      <div class="pricing-cards fade-up">
+        <div class="price-card price-card--sg">
+          <div class="price-card-header">
+            <span class="flag">🇸🇬</span>
+            <h3>Singapore Pricing</h3>
+            <span class="badge badge--green">Generally accepted</span>
+          </div>
+          <ul class="price-list">
+            <li><span class="price-icon">✓</span> Japanese snacks at SGD 2.50–12 sit within a market with S$12,446 median household income</li>
+            <li><span class="price-icon">✓</span> Higher baseline cost of living normalises Donki's prices</li>
+            <li><span class="price-icon">✓</span> Documented real examples: Kameda Seed Snacks S$3.90 at Donki vs S$4.50+ elsewhere; Calpis Concentrate 1L S$9.80 at Donki vs S$16 at Meidi-Ya (AsiaOne, 2019 — illustrative, not current pricing)</li>
+          </ul>
+        </div>
+        <div class="price-card price-card--my">
+          <div class="price-card-header">
+            <span class="flag">🇲🇾</span>
+            <h3>Malaysia Pricing</h3>
+            <span class="badge badge--red">Harder to justify</span>
+          </div>
+          <ul class="price-list">
+            <li><span class="price-icon">✗</span> Same absolute prices represent a larger share of a household budget where median urban income is RM8,139/month</li>
+            <li><span class="price-icon">✗</span> Local competitors (AEON, Lotus's, Village Grocer) offer comparable everyday items at lower price points</li>
+            <li><span class="price-icon">✗</span> No public country-level Donki Malaysia price data exists to quantify the exact gap — this is a purchasing-power argument, not a verified basket comparison</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="two-col-block fade-up">
+        <div class="tc-panel">
+          <h3>Price Benchmarking — A Framework, Not Invented Numbers</h3>
+          <p>A rigorous comparison would set Donki against a Mass Supermarket, a Premium Supermarket, and Online grocery, using price-per-100g or price-per-unit (not sticker price) to control for different pack sizes. Public, current, matched-SKU pricing across Donki Singapore, Donki Malaysia and named competitors is not available to this research — the structure is offered here for future work rather than filled with estimated figures.</p>
+        </div>
+        <div class="tc-panel">
+          <h3>Selective Price Competitiveness</h3>
+          <p>Donki does not need every item to be cheap. A "key-value item" strategy keeps the most-compared, most-visible products (popular snacks, everyday essentials) price-competitive to anchor the "cheap and fun" perception, while maintaining stronger margins on exclusive, harder-to-compare items (cosmetics, limited imports, private label). This trades some margin on visible items for traffic and perceived value — a balance PPIH's own FY6/26 results describe pursuing domestically through its "EDRP" (EveryDay Real Price) programme on selected SKUs.</p>
+        </div>
+      </div>
+      <div class="insight-callout fade-up">
+        <div class="insight-icon">💡</div>
+        <p><strong>Key Insight:</strong> Without a pricing-localisation strategy — different price tiers, local product substitutes, or targeted deals — the brand risks being read as a niche premium store rather than an affordable, fun discount retailer, in exactly the markets where purchasing power is lower.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: SUPPLY CHAIN -->
+  <section id="s2b-supplychain" class="section section--dark">
+    <div class="container">
+      <div class="section-label fade-up" style="color: var(--yellow);">06 — Argument Five</div>
+      <h2 class="section-title fade-up" style="color:#fff;">Supply Chain:<br>Can Donki Actually Afford to Sell for Less?</h2>
+      <div class="concept-intro fade-up">
+        <p style="color:#ccc;">Every stage between manufacturer and shelf can add cost. Whether Donki can be genuinely cheap in a given market depends on how many of those stages it controls.</p>
+      </div>
+
+      <div class="supply-chain-diagram fade-up">
+        <div class="sc-step">Manufacturer</div><div class="sc-arrow">→</div>
+        <div class="sc-step">Exporter</div><div class="sc-arrow">→</div>
+        <div class="sc-step">Shipping / Logistics</div><div class="sc-arrow">→</div>
+        <div class="sc-step">Importer / Distribution</div><div class="sc-arrow">→</div>
+        <div class="sc-step">Store</div><div class="sc-arrow">→</div>
+        <div class="sc-step sc-step--final">Customer</div>
+      </div>
+
+      <p class="framework-note fade-up" style="color:#ccc;">PPIH's own FY6/26 results give real, verifiable evidence of this lever in action domestically: <strong style="color:#fff;">Direct-Sourced PB/OEM products</strong> (where PPIH leads product planning and sourcing directly with partner factories, cutting out intermediaries) reached ¥110.0 billion in sales in Japan, up 32.3% year-on-year, and PPIH states these carry the highest gross margin of any of its proprietary product categories. Group-wide PB/OEM sales reached ¥508.2 billion (+16.1% YoY), 26.2% of Discount Store sales mix. This is a real, disclosed mechanism — not a hypothetical — but it is documented for the Japan domestic business; PPIH does not disclose whether or how far this sourcing model extends to Singapore or Malaysia stores.</p>
+
+      <div class="two-col-block fade-up">
+        <div class="tc-panel">
+          <h3>Same Brand, Different Market</h3>
+          <p>A general principle worth testing for Donki: a global or regional brand's product is not always identical across markets — formulation, pack size, and price can differ by country due to regulation, sourcing, and local distribution deals. Whether Donki could similarly source market-specific SKUs, negotiate directly with regional suppliers, or adjust pack sizes for Malaysia specifically is not publicly disclosed by PPIH, but it is the same lever documented in their domestic PB/OEM strategy above.</p>
+        </div>
+        <div class="tc-panel">
+          <h3>What Happens to the Savings?</h3>
+          <p>If supply-chain costs fall, PPIH has three broad options: pass all savings to customers (lower prices, more demand, thinner margin per unit); keep all savings (higher margin, weaker price advantage); or split the difference. PPIH's own domestic pricing commentary in FY6/26 — prioritising "customer acquisition" through pricing while accepting a temporary gross-margin dip — suggests the group leans toward sharing savings with customers when chasing market share, at least in Japan. Whether the same trade-off applies overseas is not disclosed.</p>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="sources" class="section section--cream">
-  <div class="container">
-    <div class="section-label fade-up">14 — References</div>
-    <h2 class="section-title fade-up">Sources & Evidence</h2>
-    <div class="source-note fade-up"><strong>Evidence discipline:</strong> country-level Donki financial data is limited publicly. Where the website uses hypotheses, frameworks or hypothetical economics, they are explicitly labelled rather than presented as measured facts.</div>
-    <div class="sources-list fade-up">
-      <div class="source-item"><b>01</b><div><strong>Pan Pacific International Holdings (PPIH)</strong><p>FY6/26 financial results and presentation. Used for June 30, 2026 store counts, Asia segment performance and store rationalisation context.</p></div></div>
-      <div class="source-item"><b>02</b><div><strong>Singapore Department of Statistics — SingStat</strong><p>2025 median monthly household market income: S$12,446.</p></div></div>
-      <div class="source-item"><b>03</b><div><strong>Department of Statistics Malaysia — HIES 2024</strong><p>2024 median monthly household gross income: RM7,017 nationally; RM8,139 urban; RM10,802 in W.P. Kuala Lumpur.</p></div></div>
-      <div class="source-item"><b>04</b><div><strong>World Bank — World Development Indicators</strong><p>GDP per capita data used for broader economic context.</p><a href="https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?locations=SG" target="_blank">Open source ↗</a></div></div>
-      <div class="source-item"><b>05</b><div><strong>Chong, Sabrina (2023), The Lowdown</strong><p>Discussion of Donki's compressed display philosophy, organisational culture and retail model.</p><a href="https://thelowdown.momentum.asia/how-corporates-can-learn-from-the-messiness-of-don-don-donki/" target="_blank">Open source ↗</a></div></div>
-      <div class="source-item"><b>06</b><div><strong>Luo, Lei & Takanokura, Masato (2025), J-STAGE</strong><p>Academic study of shopping experiences in Japanese stores.</p><a href="https://www.jstage.jst.go.jp/article/jima/76/2E/76_79/_article/-char/ja/" target="_blank">Open source ↗</a></div></div>
-      <div class="source-item"><b>07</b><div><strong>Time Out Singapore (2026)</strong><p>Report on 726,200 Singaporeans travelling to Japan in 2025. Used as contextual evidence for the Japan-exposure hypothesis.</p><a href="https://www.timeout.com/singapore/news/726-200-singaporeans-travelled-to-japan-in-2025-these-are-the-top-5-regions-visited-021226" target="_blank">Open source ↗</a></div></div>
-      <div class="source-item"><b>08</b><div><strong>AsiaOne / SETHLUI historical price examples</strong><p>Historical Singapore prices used only as illustrative examples of key-value-item analysis, not as current benchmarks.</p></div></div>
-      <div class="source-item"><b>09</b><div><strong>Malaysia Donki market commentary</strong><p>Secondary commentary used to identify hypotheses around localisation, pricing and expansion. These claims are treated cautiously and are not presented as definitive causal findings.</p></div></div>
+  <!-- SECTION: PLACEMENT -->
+  <section id="s2c-placement" class="section">
+    <div class="container">
+      <div class="section-label fade-up">07 — Argument Six</div>
+      <h2 class="section-title fade-up">Placement:<br>Is Donki in the Right Place?</h2>
+      <div class="concept-intro fade-up">
+        <p>A famous shopping mall does not automatically mean a good Donki location. The real question is whether the store's <strong>catchment area</strong> — the geographic area from which a store realistically draws customers — contains enough of the right kind of customer.</p>
+      </div>
+
+      <div class="factor-grid fade-up">
+        <div class="factor-chip">Population</div>
+        <div class="factor-chip">Income</div>
+        <div class="factor-chip">Age profile</div>
+        <div class="factor-chip">Tourist footfall</div>
+        <div class="factor-chip">Japan exposure</div>
+        <div class="factor-chip">Transport access</div>
+        <div class="factor-chip">Local competition</div>
+        <div class="factor-chip">Rent</div>
+        <div class="factor-chip">Segment mix</div>
+      </div>
+
+      <div class="two-col-block fade-up">
+        <div class="tc-panel">
+          <h3>Case Study: Mid Valley Megamall, Kuala Lumpur</h3>
+          <p>Mid Valley is one of KL's highest-footfall malls, and provided a strong initial location. Whether it, and subsequent Malaysian locations, matched the specific catchment profile Donki needs — high Japan-exposure, higher-income, discovery-seeking shoppers — is a fair open question rather than a settled failure. Public footfall, demographic, and rent data at the granularity needed to answer this properly is not available to this research; PPIH's own materials note only that its Asia strategy going forward will "build store models tailored to local catchment areas," which implies the company itself sees a gap here.</p>
+        </div>
+        <div class="tc-panel">
+          <h3>Cosmopolitan vs. Local Catchments</h3>
+          <p>A cosmopolitan catchment (international exposure, tourists, higher willingness to pay for imports) suits the "discovery" store format. A more local catchment offers everyday grocery demand and potentially less premium competition, but lower willingness to pay a Japan premium — meaning the store format itself, not just the marketing, may need to change with the catchment. This maps directly onto PPIH's own domestic playbook (Urban Downtown Donki vs. Suburban Roadside Donki, see Section 09), which the company has not yet stated it applies overseas.</p>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-inner">
-      <div class="footer-brand"><span class="logo-icon">◆</span> DONKI研究</div>
-      <p>Research paper on Don Don Donki's localisation strategy in Singapore and Malaysia. Academic purpose only. Not affiliated with PPIH or Don Don Donki.</p>
-      <small>© 2026 — Research website</small>
+  <!-- SECTION: PROMOTION -->
+  <section id="s2d-promotion" class="section section--cream">
+    <div class="container">
+      <div class="section-label fade-up">08 — Argument Seven</div>
+      <h2 class="section-title fade-up">Promotion:<br>What Is Donki Actually Promising the Customer?</h2>
+      <div class="concept-intro fade-up">
+        <p>Two distinct value propositions run through Donki's marketing, and they target different customers.</p>
+      </div>
+
+      <div class="two-col-block fade-up">
+        <div class="tc-panel">
+          <h3>"Japan at an Affordable Price"</h3>
+          <p>Targets: value-conscious shoppers, regular grocery customers, families. Message: this is a good deal on things you already buy. Depends entirely on the pricing localisation discussed in Section 05 actually holding up.</p>
+        </div>
+        <div class="tc-panel">
+          <h3>"A Japanese Shopping Experience"</h3>
+          <p>Targets: younger consumers, Japan enthusiasts, tourists, social-media users. Message: come discover something new. This is the proposition the experiential-retail chain in Section 02 is built around.</p>
+        </div>
+      </div>
+
+      <div class="promo-flow fade-up">
+        <div class="promo-row"><strong>Price promotion</strong><span>→ Value-conscious shopper</span><span>→ "This is a good deal"</span></div>
+        <div class="promo-row"><strong>Limited Japanese product</strong><span>→ Discovery shopper</span><span>→ "I may not find this elsewhere"</span></div>
+        <div class="promo-row"><strong>Fresh meal promotion</strong><span>→ Convenience shopper</span><span>→ "This solves dinner"</span></div>
+      </div>
+
+      <div class="two-col-block fade-up">
+        <div class="tc-panel">
+          <h3>Donki vs. Online Grocery</h3>
+          <p>Online platforms (FairPrice Online, RedMart, GrabMart, foodpanda, Shopee) win on convenience and delivery. Donki's physical stores compete instead on discovery, browsing, freshness, and impulse purchases — experiences online cannot replicate. The strategic implication is that Donki should not try to out-convenience delivery apps; it should double down on what a screen cannot offer.</p>
+        </div>
+        <div class="tc-panel">
+          <h3>Same Message, Every Market?</h3>
+          <p>PPIH's own FY6/26 tax-free sales strategy shows a market-differentiated promotional approach already in place for tourists — marketing "across countries and regions" tailored by nationality, with the fastest growth in FY6/26 coming from Europe (+67.3%) and the U.S. (+32.4%), not just traditional feeder markets. There is no public evidence of an equivalent degree of promotional localisation for resident shoppers in Malaysia specifically.</p>
+        </div>
+      </div>
     </div>
-  </div>
-</footer>
+  </section>
 
-<script src="script.js"></script>
+  <!-- SECTION 3: EXPANSION & LOCALISATION (kept, corrected) -->
+  <section id="s3-expansion" class="section">
+    <div class="container">
+      <div class="section-label fade-up">09 — Argument Eight</div>
+      <h2 class="section-title fade-up">Localisation Infrastructure:<br>Getting the Structural Details Right</h2>
+      <div class="concept-intro fade-up">
+        <p>Beyond atmosphere, product and price is the practical side of localisation: where stores are located, how quickly expansion proceeds, how much decision-making is delegated locally, and whether halal compliance goes far enough. On these points, Singapore and Malaysia show real, structural differences — though the honest framing is "different localisation stage," not "success vs. failure."</p>
+      </div>
+      <div class="loc-grid fade-up">
+        <div class="loc-card">
+          <div class="loc-card-icon">🕌</div>
+          <h3>Halal Integration</h3>
+          <div class="loc-compare-mini">
+            <div class="mini-sg"><span class="mini-flag">🇸🇬</span><p>Singapore introduced dedicated halal sections despite Muslims forming around 15% of the population, serving both Muslim shoppers and broader demand for halal-certified products among non-Muslims and tourists.</p></div>
+            <div class="mini-divider"></div>
+            <div class="mini-my"><span class="mini-flag">🇲🇾</span><p>Donki/JONETZ has introduced halal products and dedicated halal sections in Malaysia — this is not a market with no halal integration. The sharper research question is whether that halal assortment is broad enough yet to support <em>regular grocery trips</em>, not just occasional purchases, for a Muslim-majority population (~63%). Malaysia's JAKIM certification requires inspection of entire factories and every raw ingredient, which is a materially higher bar for a business built on direct Japanese imports than for a locally-sourced retailer — a plausible reason halal range-building has taken longer, though PPIH does not disclose the specifics.</p></div>
+          </div>
+        </div>
+        <div class="loc-card">
+          <div class="loc-card-icon">📍</div>
+          <h3>Store Location Strategy</h3>
+          <div class="loc-compare-mini">
+            <div class="mini-sg"><span class="mini-flag">🇸🇬</span><p>Placement in high-footfall, high-spending corridors: Tanjong Pagar, Orchard Central, City Square Mall — chosen for exposure to young, internationally-oriented consumers.</p></div>
+            <div class="mini-divider"></div>
+            <div class="mini-my"><span class="mini-flag">🇲🇾</span><p>Mid Valley Megamall provided a strong initial footfall base (Section 07), but whether the catchment matched Donki's ideal customer profile as closely as its Singapore sites is an open, testable question rather than a confirmed misstep.</p></div>
+          </div>
+        </div>
+        <div class="loc-card">
+          <div class="loc-card-icon">🏢</div>
+          <h3>Local Management Autonomy</h3>
+          <div class="loc-compare-mini">
+            <div class="mini-sg"><span class="mini-flag">🇸🇬</span><p>PPIH's Asia segment is reported as one combined block (Singapore, Hong Kong, Thailand, Taiwan, Malaysia, Macau) with no public country-level P&L, so claims about how much day-to-day autonomy any single country team holds cannot be independently verified from PPIH's disclosures.</p></div>
+            <div class="mini-divider"></div>
+            <div class="mini-my"><span class="mini-flag">🇲🇾</span><p>Reports have suggested Malaysian operations may draw on regional (Singapore-based) management support, but this cannot be confirmed from public filings. PPIH's FY6/27 guidance does state a group-wide intent to "build store models tailored to local catchment areas" for the whole Asia segment — implying more local calibration going forward, whatever the current baseline is.</p></div>
+          </div>
+        </div>
+        <div class="loc-card">
+          <div class="loc-card-icon">📈</div>
+          <h3>Store Network — Verified PPIH Data (Jun 2026)</h3>
+          <div class="loc-compare-mini">
+            <div class="mini-sg"><span class="mini-flag">🇸🇬</span><p><strong>16 stores</strong> as of end-FY6/26 (up from the single 2017 entry outlet). Singapore's network has grown steadily since 2017, the longest-running of PPIH's Southeast Asian markets.</p></div>
+            <div class="mini-divider"></div>
+            <div class="mini-my"><span class="mini-flag">🇲🇾</span><p><strong>2 stores</strong> as of end-FY6/26, down from 4 in FY6/24 and FY6/25. This decline happened alongside a broader Asia-segment rationalisation of underperforming stores — Thailand and Singapore both saw temporary in-year dips too — after which PPIH reported the Asia segment's operating margin <em>improved sharply</em> to 5.5% (up 3.3 points YoY) and stated it expects "all stores in Asia to be profitable in FY6/27." The much smaller Malaysian network raises real questions about location, localisation and unit economics — but it sits inside a group-wide portfolio clean-up, not a Malaysia-only retreat.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="insight-callout fade-up">
+        <div class="insight-icon">💡</div>
+        <p><strong>Key Insight:</strong> Localisation infrastructure — halal range depth, location fit, management calibration, and disciplined expansion pace — is where PPIH's own disclosures give the clearest, most verifiable signal: the company is actively still building the operating model for Southeast Asia, not executing a finished one.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: STORE ECONOMICS -->
+  <section id="s3b-storeeconomics" class="section section--dark">
+    <div class="container">
+      <div class="section-label fade-up" style="color: var(--yellow);">10 — Argument Nine</div>
+      <h2 class="section-title fade-up" style="color:#fff;">Store Economics:<br>Can a Donki Store Actually Make Money?</h2>
+      <div class="concept-intro fade-up">
+        <p style="color:#ccc;">A country can look attractive on paper and still be a poor market if individual stores cannot clear break-even. This is the level of analysis missing from most casual commentary on Donki's regional performance — including most of this research, honestly, since store-level data is not public.</p>
+      </div>
+
+      <div class="econ-formula-grid fade-up">
+        <div class="econ-item"><strong>Revenue per store</strong><span>Annual revenue ÷ store count</span></div>
+        <div class="econ-item"><strong>Average basket</strong><span>Revenue ÷ transactions</span></div>
+        <div class="econ-item"><strong>Gross profit</strong><span>Revenue × gross margin %</span></div>
+        <div class="econ-item"><strong>Break-even sales</strong><span>Fixed costs ÷ gross margin %</span></div>
+      </div>
+
+      <div class="hypo-box fade-up">
+        <div class="hypo-label">HYPOTHETICAL EXAMPLE — NOT ACTUAL DONKI DATA</div>
+        <p>If a store carries S$5 million in annual fixed costs (rent, labour, utilities) and operates at a 30% gross margin, it needs roughly <strong>S$16.7 million</strong> in annual sales just to break even (S$5m ÷ 0.30). A new store should only open where realistic sales potential sits comfortably above that line — a test of catchment quality (Section 07), not just brand enthusiasm.</p>
+      </div>
+
+      <p class="framework-note fade-up" style="color:#ccc;">The one piece of real, group-disclosed context: PPIH's Asia segment (all six countries combined) posted net sales of ¥99.1 billion and operating income of ¥5.5 billion in FY6/26 — an operating margin of 5.5%, up sharply from 2.2% the year before. That improvement was driven explicitly by "closure of underperforming locations" and a "shift in traffic to remaining stores." This is consistent with a portfolio that was, in aggregate, running some stores below their break-even line until recently.</p>
+
+      <h3 class="kpu-title fade-up">What We Know / What We Don't</h3>
+      <div class="kpu-grid fade-up">
+        <div class="kpu-col kpu-known">
+          <h4>Known</h4>
+          <ul><li>PPIH group and Asia-segment (combined) financials</li><li>Country-level store counts</li><li>Singapore & Malaysia household income (SingStat, DOSM)</li><li>PPIH's own stated strategy language</li></ul>
+        </div>
+        <div class="kpu-col kpu-proxy">
+          <h4>Proxy</h4>
+          <ul><li>Japan travel/tourism exposure</li><li>Mall footfall (general, not Donki-specific)</li><li>Consumer commentary on format familiarity</li></ul>
+        </div>
+        <div class="kpu-col kpu-unknown">
+          <h4>Unknown — needs store-level data</h4>
+          <ul><li>Revenue, profit or COGS per store</li><li>Rent or labour cost per Malaysian store</li><li>Repeat-customer rate by country</li><li>Basket size or top SKUs per country</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: INTERNATIONAL EXPANSION -->
+  <section id="s3c-globalexpansion" class="section section--cream">
+    <div class="container">
+      <div class="section-label fade-up">11 — Argument Ten</div>
+      <h2 class="section-title fade-up">Is Donki's Model Actually Transferable?</h2>
+      <div class="concept-intro fade-up">
+        <p>ASEAN is not one consumer market. Singapore, Malaysia, Thailand, Vietnam and Indonesia differ in income, religion, food culture, retail structure, and Japan exposure — regional expansion requires localisation, not replication.</p>
+      </div>
+
+      <div class="store-network-table fade-up">
+        <h3 class="chart-title">PPIH Store Network by Market — as of June 30, 2026 (verified, PPIH FY6/26 filing)</h3>
+        <div class="net-grid">
+          <div class="net-cell"><span class="net-num">16</span>Singapore</div>
+          <div class="net-cell"><span class="net-num">10</span>Hong Kong</div>
+          <div class="net-cell"><span class="net-num">8</span>Thailand</div>
+          <div class="net-cell"><span class="net-num">6</span>Taiwan</div>
+          <div class="net-cell"><span class="net-num">2</span>Malaysia</div>
+          <div class="net-cell"><span class="net-num">2</span>Macau</div>
+          <div class="net-cell"><span class="net-num">79</span>North America</div>
+        </div>
+      </div>
+
+      <div class="product-grid fade-up">
+        <div class="prod-card"><h4>Thailand</h4><span class="prod-role">Japanese affinity ≠ automatic profit</span><p>Strong Japanese cultural popularity and tourism, but PPIH's Asia-segment figures don't break Thailand out separately — the group's own commentary credits "pricing strategies" in Hong Kong and Thailand specifically for recent customer-traffic gains, suggesting active, market-specific tuning rather than a finished playbook.</p></div>
+        <div class="prod-card"><h4>Vietnam</h4><span class="prod-role">Not yet entered — a recommendation, not PPIH strategy</span><p>Fast-growing modern retail and rising urban incomes make Vietnam a plausible future market, but this is this research's own suggestion, not a disclosed PPIH plan. A staged approach — small pilot, then measure basket size and repeat visits, then expand only if store economics work — would apply the lessons of Sections 09–10 rather than repeating Malaysia's faster initial pace.</p></div>
+        <div class="prod-card"><h4>Indonesia</h4><span class="prod-role">High potential, high localisation requirement</span><p>Large population and growing modern retail offer scale, but a Muslim-majority population, halal requirements, and complex geography would likely require an even more localised model than Malaysia's — not a simple copy of the Singapore format.</p></div>
+      </div>
+
+      <h3 class="chart-title fade-up" style="margin-top:2rem;">Expansion Decision Matrix</h3>
+      <p class="framework-note fade-up">Ratings reflect direction of evidence gathered in this research, not precise scores — several cells are marked "further research required" deliberately, per Section 10's Known/Proxy/Unknown distinction.</p>
+      <div class="matrix-table fade-up">
+        <div class="matrix-row matrix-header"><span>Market</span><span>Japan Affinity</span><span>Purchasing Power</span><span>Halal Requirement</span><span>Store Count (Jun 2026)</span></div>
+        <div class="matrix-row"><span>Singapore</span><span class="tag tag-high">High</span><span class="tag tag-high">High</span><span class="tag tag-med">Moderate</span><span>16</span></div>
+        <div class="matrix-row"><span>Malaysia</span><span class="tag tag-med">Moderate</span><span class="tag tag-med">Moderate</span><span class="tag tag-high">High</span><span>2</span></div>
+        <div class="matrix-row"><span>Thailand</span><span class="tag tag-high">High</span><span class="tag tag-med">Moderate</span><span class="tag tag-low">Low</span><span>8</span></div>
+        <div class="matrix-row"><span>Vietnam</span><span class="tag tag-req">Further research required</span><span class="tag tag-req">Further research required</span><span class="tag tag-low">Low</span><span>0</span></div>
+        <div class="matrix-row"><span>Indonesia</span><span class="tag tag-req">Further research required</span><span class="tag tag-med">Moderate</span><span class="tag tag-high">High</span><span>0</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: MANAGEMENT RECOMMENDATIONS -->
+  <section id="s3d-recommendations" class="section">
+    <div class="container">
+      <div class="section-label fade-up">12 — Recommendations</div>
+      <h2 class="section-title fade-up">If You Were Donki Management, What Would You Do?</h2>
+      <div class="reco-grid fade-up">
+        <div class="reco-card"><span class="reco-num">01</span><h4>Localise the Product Mix</h4><p>Keep Japanese differentiation, but grow local-market and halal-compliant everyday categories where a market's repeat-purchase potential depends on them.</p></div>
+        <div class="reco-card"><span class="reco-num">02</span><h4>Use Selective Price Competitiveness</h4><p>Don't discount everything. Anchor perceived value on key, frequently-compared items; protect margin on exclusives.</p></div>
+        <div class="reco-card"><span class="reco-num">03</span><h4>Localise the Store Format</h4><p>Follow PPIH's own domestic playbook — different formats for different catchments — and extend it deliberately overseas.</p></div>
+        <div class="reco-card"><span class="reco-num">04</span><h4>Treat Halal as Market Access, Not Marketing</h4><p>In Malaysia and any future Indonesia entry, halal breadth determines the addressable customer base for everyday grocery trips.</p></div>
+        <div class="reco-card"><span class="reco-num">05</span><h4>Grow Repeat-Purchase Categories</h4><p>Fresh food, household goods, personal care — the categories that build customer lifetime value, not just first-visit buzz.</p></div>
+        <div class="reco-card"><span class="reco-num">06</span><h4>Keep the Japanese Exclusives</h4><p>They create the differentiation and discovery that make the format worth visiting in the first place — don't over-correct away from them.</p></div>
+        <div class="reco-card"><span class="reco-num">07</span><h4>Pilot New Markets Deliberately</h4><p>Especially Vietnam: small pilot, measure store economics, expand only if the numbers hold — rather than Malaysia's comparatively faster initial pace.</p></div>
+        <div class="reco-card"><span class="reco-num">08</span><h4>Expand on Store Economics, Not Population Size</h4><p>A large population or strong Japanese cultural affinity does not guarantee a store clears break-even — Section 10's framework should gate expansion decisions.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONCLUSION -->
+  <section id="conclusion" class="section section--dark">
+    <div class="container">
+      <div class="section-label fade-up" style="color: var(--yellow);">13 — Conclusion</div>
+      <h2 class="section-title fade-up" style="color: #fff;">The Limits of Experiential Retail</h2>
+      <div class="conclusion-grid fade-up">
+        <div class="conclusion-main">
+          <p style="color:#ccc;">The comparative performance of Don Don Donki in Singapore and Malaysia is a useful case study in the difficulty of international retail localisation. Both markets received a recognisably similar brand, store concept and product philosophy. The outcomes so far have differed — but the honest conclusion is not "Singapore succeeded, Malaysia failed." It is that <strong style="color:#fff;">Donki's model is at a different stage of localisation in each market</strong>, and PPIH's own FY6/26 disclosures describe a company still actively adjusting its Southeast Asian playbook, not one that has already finished doing so.</p>
+          <p style="color:#ccc;"><strong style="color:#fff;">Experiential retail is not a fully self-sufficient expansion strategy.</strong> The "treasure hunt" model that built Donki's identity in Japan and found strong footing in Singapore is not an automatically transferable formula — its effectiveness depends on product fit, pricing relative to purchasing power, placement, promotion, supply-chain economics, and disciplined, catchment-aware expansion, all working together.</p>
+          <p style="color:#ccc;">Singapore's conditions — higher purchasing power, documented Japan-exposure, and a longer runway since 2017 — appear to have supported faster, larger-scale success. Malaysia's halal-certification bar, more price-sensitive market, and a portfolio-wide Asia rationalisation in FY6/26 point to a market still being calibrated, not one that has been abandoned or has structurally failed.</p>
+        </div>
+        <div class="conclusion-thesis">
+          <div class="thesis-box">
+            <div class="thesis-label">Core Thesis</div>
+            <p>Sustainable cross-border retail growth for Donki requires the alignment of interdependent systems, not a single "experience" factor:</p>
+            <div class="thesis-pillars">
+              <div class="pillar"><div class="pillar-num">01</div><div class="pillar-text"><strong>Product & Pricing</strong> — adapted to local purchasing power and dietary requirements</div></div>
+              <div class="pillar"><div class="pillar-num">02</div><div class="pillar-text"><strong>Placement & Promotion</strong> — matched to the customer the catchment actually contains</div></div>
+              <div class="pillar"><div class="pillar-num">03</div><div class="pillar-text"><strong>Operations & Economics</strong> — halal compliance, supply-chain cost control, and store-level break-even discipline</div></div>
+            </div>
+            <p style="margin-top:1rem; font-weight:600; color:#fff;">Donki should not export one identical store. It should export a business system that can be localised — and PPIH's own FY6/27 guidance suggests that is exactly the phase its Asia business is now in.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOURCES -->
+  <section id="sources" class="section section--cream">
+    <div class="container">
+      <div class="section-label fade-up">14 — References</div>
+      <h2 class="section-title fade-up">Sources</h2>
+      <div class="sources-list fade-up">
+
+        <div class="source-item">
+          <div class="source-num">01</div>
+          <div class="source-body">
+            <div class="source-author">Pan Pacific International Holdings Corporation (Aug 18, 2026)</div>
+            <div class="source-title">Consolidated Financial Results for the Fiscal Year Ended June 30, 2026 [Japanese GAAP]</div>
+            <div class="source-meta">Primary source for group and Asia-segment financials, store counts by country, and Robin Hood / PB/OEM strategy detail used throughout Sections 05, 06, 09, 10 and 11.</div>
+            <a class="source-link" href="https://ppih.co.jp/en/ir/" target="_blank" rel="noopener noreferrer">PPIH IR site ↗</a>
+          </div>
+        </div>
+
+        <div class="source-item">
+          <div class="source-num">02</div>
+          <div class="source-body">
+            <div class="source-author">Pan Pacific International Holdings Corporation (Aug 18, 2026)</div>
+            <div class="source-title">Results for FY6/26 — Investor Presentation</div>
+            <div class="source-meta">Slide-deck detail on Asia Business hypotheses, store-format catchment strategy (Urban Commercial District / Station-Front / Suburban Residential Store models), and PB/OEM gross margin structure. Used in Sections 06, 07 and 09.</div>
+            <a class="source-link" href="https://ppih.co.jp/en/ir/" target="_blank" rel="noopener noreferrer">PPIH IR site ↗</a>
+          </div>
+        </div>
+
+        <div class="source-item">
+          <div class="source-num">03</div>
+          <div class="source-body">
+            <div class="source-author">Department of Statistics Malaysia (DOSM) (Oct 2025)</div>
+            <div class="source-title">Household Income Survey Report, Malaysia 2024</div>
+            <div class="source-meta">Official primary source for Malaysia's national, urban, and Kuala Lumpur median/mean household income figures used in Section 05.</div>
+            <a class="source-link" href="https://open.dosm.gov.my/" target="_blank" rel="noopener noreferrer">OpenDOSM ↗</a>
+          </div>
+        </div>
+
+        <div class="source-item">
+          <div class="source-num">04</div>
+          <div class="source-body">
+            <div class="source-author">Singapore Department of Statistics (SingStat) (Feb 2026)</div>
+            <div class="source-title">Key Household Income Trends, 2025</div>
+            <div class="source-meta">Official primary source for Singapore's median monthly household market income figure used in Section 05.</div>
+            <a class="source-link" href="https://www.singstat.gov.sg/" target="_blank" rel="noopener noreferrer">SingStat ↗</a>
+          </div>
+        </div>
+
+        <div class="source-item">
+          <div class="source-num">05</div>
+          <div class="source-body">
+            <div class="source-author">Chris K. (Aug 1, 2025)</div>
+            <div class="source-title">"Don Don Donki's Malaysia Setback – Expansion Lessons from Asia's 'Donki' Boom"</div>
+            <div class="source-meta">Published on LinkedIn Pulse. A secondary, non-official critique of Donki Malaysia's early strategy; used with caution and cross-checked against PPIH's own disclosures wherever possible.</div>
+            <a class="source-link" href="https://www.linkedin.com/pulse/don-donkis-malaysia-setback-expansion-lessons-from-asias-chris-kuang-5n9uc" target="_blank" rel="noopener noreferrer">Read article ↗</a>
+          </div>
+        </div>
+
+        <div class="source-item">
+          <div class="source-num">06</div>
+          <div class="source-body">
+            <div class="source-author">Van Rooden, Maaike</div>
+            <div class="source-title">"Inside DON DON DONKI Retail: A Full-On Japanese Shopping Experience"</div>
+            <div class="source-meta">Firsthand account of the Don Don Donki retail format and "treasure hunt" shopping experience. Used to contextualise Section 02.</div>
+          </div>
+        </div>
+
+        <div class="source-item">
+          <div class="source-num">07</div>
+          <div class="source-body">
+            <div class="source-author">Chong, Sabrina (Jan 30, 2023)</div>
+            <div class="source-title">"How corporates can learn from the messiness of Don Don Donki"</div>
+            <div class="source-meta">Published in <em>The Lowdown</em> by Momentum Asia. Supports the compressed-display and management-culture discussion in Section 09.</div>
+            <a class="source-link" href="https://thelowdown.momentum.asia/how-corporates-can-learn-from-the-messiness-of-don-don-donki/" target="_blank" rel="noopener noreferrer">Read article ↗</a>
+          </div>
+        </div>
+
+        <div class="source-item">
+          <div class="source-num">08</div>
+          <div class="source-body">
+            <div class="source-author">Luo, Lei & Takanokura, Masato (Jul 15, 2025)</div>
+            <div class="source-title">"Clustering Daily Shopping Experiences in Japanese Stores"</div>
+            <div class="source-meta">Published in <em>Journal of the International Management Association (JIMA)</em>, Vol. 76, No. 2E, p.79. J-STAGE. Academic grounding for Section 02's experiential-retail argument.</div>
+            <a class="source-link" href="https://www.jstage.jst.go.jp/article/jima/76/2E/76_79/_article/-char/ja/" target="_blank" rel="noopener noreferrer">View journal article ↗</a>
+          </div>
+        </div>
+
+        <div class="source-item">
+          <div class="source-num">09</div>
+          <div class="source-body">
+            <div class="source-author">Time Out Singapore (Feb 12, 2026)</div>
+            <div class="source-title">"726,200 Singaporeans travelled to Japan in 2025 — these are the top 5 regions visited"</div>
+            <div class="source-meta">Used as a proxy indicator (not proof of causation) for Japan cultural exposure in Section 02 and 03's hypothesis discussion.</div>
+            <a class="source-link" href="https://www.timeout.com/singapore/news/726-200-singaporeans-travelled-to-japan-in-2025-these-are-the-top-5-regions-visited-021226" target="_blank" rel="noopener noreferrer">Read article ↗</a>
+          </div>
+        </div>
+
+        <div class="source-item">
+          <div class="source-num">10</div>
+          <div class="source-body">
+            <div class="source-author">AsiaOne (2019); SETHLUI.com (2023)</div>
+            <div class="source-title">Don Don Donki Singapore shopping guides — illustrative pricing examples</div>
+            <div class="source-meta">Dated blog sources used only as illustrative, historical price examples in Section 05 — not treated as current pricing, and not compared against an equivalent Malaysian basket, which is unavailable.</div>
+            <a class="source-link" href="https://www.asiaone.com/singapore/don-don-donki-singapore-shopping-guide-best-cheapest-things-buy" target="_blank" rel="noopener noreferrer">Read article ↗</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand"><span class="logo-icon">◆</span> DONKI研究</div>
+        <p class="footer-note">Research paper on Don Don Donki's localisation strategy, expanded with a 4Ps + operations + store-economics framework across Singapore, Malaysia and the wider Southeast Asia region. Academic purpose only. Not affiliated with PPIH or Don Don Donki.</p>
+        <p class="footer-copy">© 2026 — All rights reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
